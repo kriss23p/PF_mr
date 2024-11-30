@@ -2,17 +2,24 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-@@include('./pages/includes/head.html', {
-    pageTitle : '에러페이지 - 미라콤아이앤씨',
-    ogTitle: '에러페이지 - 미라콤아이앤씨',
-    ogDesc: '에러페이지입니다',
-    metaDescription: '에러페이지입니다',
-    metaKeywords: '국문 테그 : 미라콤아이앤씨, 미라콤, 에러, 에러페이지, 에러문구',
-    ogUrl: 'https://miracom-inc.com',
-    ogImage: '../../assets/images/og/miracom-og.png',
-    ogType: 'article',
-    cssPath : '../../assets/css/common.min.css'
-})
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="title" content="에러페이지 - 미라콤아이앤씨" />
+    <meta name="author" content="miracom" />
+    <meta name="description" content="에러페이지입니다" />
+    <meta name="keywords" content="국문 테그 : 미라콤아이앤씨, 미라콤, 에러, 에러페이지, 에러문구">
+    <title>에러페이지 - 미라콤아이앤씨</title>
+    <meta property="og:title" content="에러페이지 - 미라콤아이앤씨">
+    <meta property="og:url" content="https://miracom-inc.com">
+    <meta property="og:images" content="../../assets/images/og/miracom-og.png">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="에러페이지입니다">
+    <link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../assets/images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/images/favicon.png" sizes="114x114">
+    <link rel="apple-touch-icon" href="../../assets/images/favicon.png" sizes="114x114">
+    <link href="../../assets/css/common.min.css" rel="stylesheet">
 </head>
 <body>
 <div id="wrap">
@@ -32,7 +39,10 @@
         </div>
     </main>
     <!-- SCRIPT IMPORT -->
-    @@include('../src/pages/includes/scriptImport.html', {pageMain : false,})
+    <script src="../../assets/js/import/import.js"></script>
+
+
+
 </div>
 </body>
 </html>

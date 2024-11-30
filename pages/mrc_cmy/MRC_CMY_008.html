@@ -1,27 +1,178 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-@@include('./pages/includes/head.html', {
-    pageTitle : '찾아오시는 길 | 회사소개 - 미라콤아이앤씨',
-    ogTitle: '찾아오시는 길 | 회사소개 - 미라콤아이앤씨',
-    ogDesc: '미라콤아이앤씨 메일, 주소, 전화번호 등 정보를 제공합니다.',
-    metaDescription: '미라콤아이앤씨 메일, 주소, 전화번호 등 정보를 제공합니다.',
-    metaKeywords: 'Miracominc,miracom,미라콤아이앤씨,미라콤,스마트팩토리,smartfactory,miracom,미라콤주소,미라콤잠실,미라콤본사,찾아가는길',
-    ogUrl: 'https://miracom-inc.com',
-    ogImage: '../../assets/images/og/miracom-og.png',
-    ogType: 'article',
-    cssPath : '../../assets/css/common.min.css'
-})
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="title" content="찾아오시는 길 | 회사소개 - 미라콤아이앤씨" />
+    <meta name="author" content="miracom" />
+    <meta name="description" content="미라콤아이앤씨 메일, 주소, 전화번호 등 정보를 제공합니다." />
+    <meta name="keywords" content="Miracominc,miracom,미라콤아이앤씨,미라콤,스마트팩토리,smartfactory,miracom,미라콤주소,미라콤잠실,미라콤본사,찾아가는길">
+    <title>찾아오시는 길 | 회사소개 - 미라콤아이앤씨</title>
+    <meta property="og:title" content="찾아오시는 길 | 회사소개 - 미라콤아이앤씨">
+    <meta property="og:url" content="https://miracom-inc.com">
+    <meta property="og:images" content="../../assets/images/og/miracom-og.png">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="미라콤아이앤씨 메일, 주소, 전화번호 등 정보를 제공합니다.">
+    <link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../assets/images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/images/favicon.png" sizes="114x114">
+    <link rel="apple-touch-icon" href="../../assets/images/favicon.png" sizes="114x114">
+    <link href="../../assets/css/common.min.css" rel="stylesheet">
 </head>
 <body>
 <div id="wrap" class="company">
 
-    @@include('../src/pages/includes/header.html', {
-        type : 'sub-type',
-        gnb : true,
-        subDepth: true,
-        subArr : ['미라콤아이앤씨', '회사소개', 'Contact us']
-    })
+    <div id="nav-skip" class="hidden">
+    <a href="#goto-conts" tabindex="0">본문으로 바로가기</a>
+    <a href="#footer" tabindex="0">푸터 하단 바로가기</a>
+</div>
+<header id="header">
+    <div class="header">
+        <h1 class="logo"><a href="../../pages/main/main.html" title="Miracom"><img src="../../assets/images/common/header-logo-black.png" alt="Miracom"></a></h1>
+        <a href="javascript:window.history.back();" class="history-back"><span class="hidden">뒤로가기</span></a>
+        <h2 class="title-m">타이틀</h2>
+        <nav class="header-gnb" id="gnb">
+            <div class="gnb-depth2-bg"></div>
+            <ul class="gnb-depth1">
+                <li>
+                    <a href="../../pages/mrc_smr/MRC_SMR_001.html" title="미라콤의 가치 바로가기">미라콤의 가치</a>
+                    <div class="gnb-depth1-hover">
+                        <ul class="gnb-depth2">
+                            <li><a href="../../pages/mrc_smr/MRC_SMR_001.html" title="스마트팩토리 역량 바로가기">스마트팩토리 역량</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" title="서비스 및 솔루션 바로가기">서비스 및 솔루션</a>
+                    <div class="gnb-depth1-hover wide">
+                        <div class="gnb-depth1-hover-category">
+                            <dl>
+                                <dt>서비스</dt>
+                                <dd>
+                                    <ul class="gnb-depth2">
+                                        <li><a href="../../pages/mrc_srv/MRC_SRV_001.html" title="스마트팩토리 컨설팅 바로가기">스마트팩토리 컨설팅</a></li>
+                                        <li>
+                                            <span>MES 구축</span>
+                                            <ul class="gnb-depth3">
+                                               <li><a href="../../pages/mrc_srv/MRC_SRV_002.html" title="On-Premise MES 바로가기"><span>On-Premise MES</span></a></li>
+                                               <li><a href="../../pages/mrc_srv/MRC_SRV_003.html" title="Cloud MES 바로가기"><span>Cloud MES</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="../../pages/mrc_srv/MRC_SRV_004.html" title="ERP 구축 바로가기">ERP 구축</a></li>
+                                        <li><a href="../../pages/mrc_srv/MRC_SRV_005.html" title="설비 자동화 바로가기">설비 자동화</a></li>
+                                        <li><a href="../../pages/mrc_srv/MRC_SRV_006.html" title="제조물류 자동화 바로가기">제조물류 자동화</a></li>
+                                        <li><a href="../../pages/mrc_srv/MRC_SRV_007.html" title="IT 인프라 바로가기">IT 인프라</a></li>
+                                        <li><a href="../../pages/mrc_srv/MRC_SRV_008.html" title="IT 운영 (ITO) 바로가기">IT 운영 (ITO)</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>솔루션</dt>
+                                <dd>
+                                    <ul class="gnb-depth2">
+                                        <li>
+                                            <span>Nexplant MESplus</span>
+                                            <ul class="gnb-depth3">
+                                                <li>
+                                                    <a href="../../pages/mrc_srv/MRC_SOL_001.html" title="MES 바로가기" class="icon-area">
+                                                        <span>MES</span>
+                                                        <span class="descrip">플랫폼 기반 통합생산관리</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../pages/mrc_srv/MRC_SOL_002.html" title="QMS 바로가기">
+                                                        <span>QMS</span>
+                                                        <span class="descrip">품질 개선을 통한 생산성 혁신</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../pages/mrc_srv/MRC_SOL_003.html" title="EES 바로가기">
+                                                        <span>EES</span>
+                                                        <span class="descrip">실시간 설비데이터 분석 및 엔지니어링 솔루션</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../pages/mrc_srv/MRC_SOL_004.html" title="MC 바로가기">
+                                                        <span>MC</span>
+                                                        <span class="descrip">양방향 설비 온라인/자동화 실현</span>
+                                                    </a>
+                                                </li>
+                                             </ul>
+                                        </li>
+                                        <li>
+                                            <a href="../../pages/mrc_srv/MRC_SOL_005.html" title="MCS 바로가기">
+                                                MCS
+                                            </a>
+                                            <span class="descrip">물류설비 연동을 통한 반송/보관 제어</span>
+                                        </li>
+                                        <li>
+                                            <a href="../../pages/mrc_srv/MRC_SOL_006.html" title="Highway101 바로가기">
+                                                Highway101
+                                            </a>
+                                            <span class="descrip">다양한 시스템간 빠르고 쉬운 연계/통합</span>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>업종</dt>
+                                <dd>
+                                    <ul class="gnb-depth2">
+                                        <li><a href="../../pages/mrc_srv/MRC_IND_001.html" title="반도체/태양광 바로가기">반도체/태양광</a></li>
+                                        <li><a href="../../pages/mrc_srv/MRC_IND_002.html" title="전기/전자 바로가기">전기/전자</a></li>
+                                        <li><a href="../../pages/mrc_srv/MRC_IND_003.html" title="오토모티브 바로가기">오토모티브</a></li>
+                                        <li><a href="../../pages/mrc_srv/MRC_IND_004.html" title="배터리 바로가기">배터리</a></li>
+                                        <li><a href="../../pages/mrc_srv/MRC_IND_005.html" title="식음료/제약 바로가기">식음료/제약</a></li>
+                                        <li><a href="../../pages/mrc_srv/MRC_IND_006.html" title="화학/소재 바로가기">화학/소재</a></li>
+                                        <li><a href="../../pages/mrc_srv/MRC_IND_007.html" title="기계/금속 바로가기">기계/금속</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" title="고객지원 바로가기">고객지원</a>
+                    <div class="gnb-depth1-hover">
+                        <ul class="gnb-depth2">
+                            <li><a href="../../pages/mrc_cus/MRC_CUS_001.html" title="인사이트 리포트 바로가기">인사이트 리포트</a></li>
+                            <li><a href="../../pages/mrc_cus/MRC_CUS_002.html" title="라이브러리 바로가기">라이브러리</a></li>
+                            <li><a href="../../pages/mrc_cus/MRC_CUS_003.html" title="언론보도 바로가기">언론보도</a></li>
+                            <li><a href="../../pages/mrc_cus/MRC_CUS_004.html" title="공지사항 바로가기">공지사항</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" title="회사소개 바로가기">회사소개</a>
+                    <div class="gnb-depth1-hover">
+                        <ul class="gnb-depth2">
+                            <li><a href="../../pages/mrc_cmy/MRC_CMY_001.html" title="미라콤아이앤씨 바로가기">미라콤아이앤씨</a></li>
+                            <li><a href="../../pages/mrc_cmy/MRC_CMY_002.html" title="CEO 바로가기">CEO</a></li>
+                            <li><a href="../../pages/mrc_cmy/MRC_CMY_003.html" title="연혁 바로가기">연혁</a></li>
+                            <li><a href="../../pages/mrc_cmy/MRC_CMY_004.html" title="윤리경영 바로가기">윤리경영</a></li>
+                            <li><a href="../../pages/mrc_cmy/MRC_CMY_005.html" title="직무소개 바로가기">직무소개</a></li>
+                            <li><a href="../../pages/mrc_cmy/MRC_CMY_006.html" title="복리후생 바로가기">복리후생</a></li>
+                            <li><a href="../../pages/mrc_cmy/MRC_CMY_007.html" title="IR 바로가기">IR</a></li>
+                            <li><a href="../../pages/mrc_cmy/MRC_CMY_008.html" title="찾아오시는 길 바로가기">찾아오시는 길</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="top-util">
+            <a href="#none" target="_blank" title="새창 열림">문의하기</a>
+            <a href="#none" target="_blank" title="새창 열림">Cloud MES</a>
+            <a href="#none" target="_blank" title="새창 열림">스마트 팩토리 수준진단</a>
+            <ul class="language">
+                <li class="on"><a href="../../pages/main/main.html">KO</a></li>
+                <li><a href="../../pages/main/main_en.html">EN</a></li>
+            </ul>
+            <button type="button" class="top-menu ml40" aria-expanded="false"><span class="hidden"> 전체메뉴</span></button>
+        </div>
+    </div>
+</header>
     <main class="container company-08" id="goto-conts">
         <section class="">
             <div class="sub-conts">
@@ -67,9 +218,342 @@
             </div>
         </section>
     </main>
-    @@include('./pages/includes/footer.html')
+    
+<div id="footer">
+    <div class="footer-top">
+        <div class="wrap">
+            <div class="txt-box">
+                <p class="mb20">Contact Us</p>
+                <p>국내 최고 수준의 스마트팩토리<br class="mo_br"> 전문가에게 문의하세요</p>
+            </div>
+            <a href="javascript:void(0);" class="txt-box-link" title="새창 열림" role="button">바로가기</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-mid">
+            <div class="f-menu mb20">
+                <div class="term">
+                    <strong class="mr8"><a href="javascript:void(0);">개인정보처리방침</a></strong>
+                    <a href="javascript:void(0);" class="ml8">이용약관</a>
+                </div>
+                <div class="mark">
+                    <a href="https://www.wa.or.kr/" target="_blank" title="새창 열림">
+                        <img src="../../assets/images/common/web-accessibility-mark.svg" alt="과학기술정보통신부 WA WEB 접근성 한국웹접근성인증평가원 2023.09.15 ~ 2024.09.14" title="WA 품질인증 마크, 한국웹접근성인증평가원(www.wa.or.kr) 2023.09.15 ~ 2024.09.14">
+                    </a>
+                </div>
+            </div>
+            <address>
+                <p>우 05510) 서울특별시 송파구 올림픽로 35길 123 (신천동) 미라콤아이앤씨</p>
+                <p class="mb20">
+                    <span>T. 02-2125-6800</span>
+                    <span>F. 02-2125-6804</span>
+                    <span>E. miracom@miracom-inc.com</span>
+                </p>
+                <p class="copyright">Copyright ©Miracom Inc Co., Ltd. All rights reserved.</p>
+            </address>
+        </div>
+        <div class="family-site">
+            <button class="family-site-select" type="button">FAMILY SITE <span class="arrow"><em class="hidden">접기</em></span></button>
+            <ul class="family-site-menu">
+                <li>
+                    <a href="https://www.samsungsds.com/kr" target="_blank">삼성SDS</a>
+                </li>
+                <li>
+                    <a href="https://www.mespluscloud.com/custportal" target="_blank">고객포탈</a>
+                </li>
+                <li>
+                    <a href="https://www.mespluscloud.com/" target="_blank">Cloud MES</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
+<ul>
+    <li class="float-youtube"><a href="javascript:void(0);" target="_blank"><span class="hidden">유튜브 바로가기</span></a></li>
+    <li class="float-blog"> <a href="javascript:void(0);" target="_blank"><span class="hidden">블로그 바로가기</span></a></li>
+</ul>
+
+
+<div class="chat-bot">
+    <a href="javascript:void(0);" class="open" title="새창 열림">
+        <em><span class="hidden">문의하기</span></em>
+        <span>
+            <span>미라콤 전문가에게 문의해보세요</span>
+        </span>
+    </a>
+</div>
+
+<div class="float-top">
+    <a href="javascript:void(0);" title="상단으로 가기"><span class="hidden">상단으로 가기</span></a>
+</div>
+
+<!-- 전체메뉴 -->
+<div class="total-menu">
+    <h1 class="logo"><a href="javascript:void(0);" title="Miracom" tabindex="-1"><img src="../../assets/images/common/header-logo.png" alt="Miracom"></a></h1>
+    <div class="total-menu-inner">
+        <div class="total-menu-inner__left">
+            <strong class="total-menu-inner__title">고객의 성공을 <br/>만들어가는 <br/>미라콤아이앤씨</strong>
+            <div class="total-menu-inner__util">
+                <ul class="language">
+                    <li class="on"><a href="javascript:void(0);" tabindex="-1" title="국문 홈페이지로 이동">KO</a></li>
+                    <li><a href="javascript:void(0);" tabindex="-1" title="영문 홈페이지로 이동">EN</a></li>
+                </ul>
+                <ul class="partners">
+                    <li><a href="javascript:void(0);" target="_blank" title="Cloud MES 바로가기" tabindex="-1">Cloud MES</a></li>
+                    <li><a href="javascript:void(0);" target="_blank" title="스마트 팩토리 수준진단 바로가기" tabindex="-1">스마트 팩토리 수준진단</a></li>
+                    <li><a href="javascript:void(0);" target="_blank" title="문의하기 바로가기" tabindex="-1">문의하기</a></li>
+                    <li><a href="javascript:void(0);" target="_blank" title="인재채용 바로가기" tabindex="-1">인재채용</a></li>
+                </ul>
+                <ul class="sns">
+                    <li><a href="javascript:void(0);" title="블로그 바로가기" target="_blank" tabindex="-1"><img src="../../assets/images/icon/ico-blog.svg" alt="블로그 바로가기"></a></li>
+                    <li><a href="javascript:void(0);" title="유튜브 바로가기" target="_blank" tabindex="-1"><img src="../../assets/images/icon/ico-youtube-white.svg" alt="유튜브 바로가기"></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- pc -->
+        <div class="total-menu-inner__right">
+            <div class="depth1">
+                <dl>
+                    <dt class="title">미라콤의 가치</dt>
+                    <dd>
+                        <ul class="depth2">
+                            <li><a href="../../pages/mrc_smr/MRC_SMR_001.html" title="스마트팩토리 역량 바로가기" tabindex="-1">스마트팩토리 역량</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="title">서비스 및 솔루션</dt>
+                    <dd class="category-depth">
+                        <dl>
+                            <dt>서비스</dt>
+                            <dd>
+                                <ul class="depth2">
+                                    <li><a href="../../pages/mrc_srv/MRC_SRV_001.html" title="스마트팩토리 컨설팅 바로가기" tabindex="-1">스마트팩토리 컨설팅</a></li>
+                                    <li>
+                                        <span>MES 구축</span>
+                                        <ul class="depth3">
+                                           <li><a href="../../pages/mrc_srv/MRC_SRV_002.html" title="On-Premise MES 바로가기" tabindex="-1">On-Premise MES</a></li>
+                                           <li><a href="../../pages/mrc_srv/MRC_SRV_003.html" title="Cloud MES 바로가기" tabindex="-1">Cloud MES</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="../../pages/mrc_srv/MRC_SRV_004.html" title="ERP 구축 바로가기" tabindex="-1">ERP 구축</a></li>
+                                    <li><a href="../../pages/mrc_srv/MRC_SRV_005.html" title="설비 자동화 바로가기" tabindex="-1">설비 자동화</a></li>
+                                    <li><a href="../../pages/mrc_srv/MRC_SRV_006.html" title="제조물류 자동화 바로가기" tabindex="-1">제조물류 자동화</a></li>
+                                    <li><a href="../../pages/mrc_srv/MRC_SRV_007.html" title="IT 인프라 바로가기" tabindex="-1">IT 인프라</a></li>
+                                    <li><a href="../../pages/mrc_srv/MRC_SRV_008.html" title="IT 운영 (ITO) 바로가기" tabindex="-1">IT 운영 (ITO)</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>솔루션</dt>
+                            <dd>
+                                <ul class="depth2">
+                                    <li>
+                                        <span>Nexplant MESplus</span>
+                                        <ul class="depth3">
+                                           <li><a href="../../pages/mrc_srv/MRC_SOL_001.html" title="MES 바로가기" tabindex="-1">MES</a></li>
+                                           <li><a href="../../pages/mrc_srv/MRC_SOL_002.html" title="QMS 바로가기" tabindex="-1">QMS</a></li>
+                                           <li><a href="../../pages/mrc_srv/MRC_SOL_003.html" title="EES 바로가기" tabindex="-1">EES</a></li>
+                                           <li><a href="../../pages/mrc_srv/MRC_SOL_004.html" title="MC 바로가기" tabindex="-1">MC</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="../../pages/mrc_srv/MRC_SOL_005.html" title="MCS 바로가기" tabindex="-1">MCS</a></li>
+                                    <li><a href="../../pages/mrc_srv/MRC_SOL_006.html" title="Highway101 바로가기" tabindex="-1">Highway101</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>업종</dt>
+                            <dd>
+                                <ul class="depth2">
+                                    <li><a href="../../pages/mrc_srv/MRC_IND_001.html" title="반도체/태양광​ 바로가기" tabindex="-1">반도체/태양광​</a></li>
+                                    <li><a href="../../pages/mrc_srv/MRC_IND_002.html" title="전기/전자 바로가기" tabindex="-1">전기/전자</a></li>
+                                    <li><a href="../../pages/mrc_srv/MRC_IND_003.html" title="오토모티브 바로가기" tabindex="-1">오토모티브</a></li>
+                                    <li><a href="../../pages/mrc_srv/MRC_IND_004.html" title="배터리 바로가기" tabindex="-1">배터리</a></li>
+                                    <li><a href="../../pages/mrc_srv/MRC_IND_005.html" title="식음료/제약 바로가기" tabindex="-1">식음료/제약</a></li>
+                                    <li><a href="../../pages/mrc_srv/MRC_IND_006.html" title="화학/소재 바로가기" tabindex="-1">화학/소재</a></li>
+                                    <li><a href="../../pages/mrc_srv/MRC_IND_007.html" title="기계/금속 바로가기" tabindex="-1">기계/금속</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="title">고객지원</dt>
+                    <dd>
+                        <ul class="depth2">
+                            <li><a href="../../pages/mrc_cus/MRC_CUS_001.html" title="인사이트 리포트 바로가기" tabindex="-1">인사이트 리포트</a></li>
+                            <li><a href="../../pages/mrc_cus/MRC_CUS_002.html" title="라이브러리 바로가기" tabindex="-1">라이브러리</a></li>
+                            <li><a href="../../pages/mrc_cus/MRC_CUS_003.html" title="언론보도 바로가기" tabindex="-1">언론보도</a></li>
+                            <li><a href="../../pages/mrc_cus/MRC_CUS_004.html" title="공지사항 바로가기" tabindex="-1">공지사항</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="title">회사소개</dt>
+                    <dd>
+                        <ul class="depth2">
+                            <li><a href="../../pages/mrc_cmy/MRC_CMY_001.html" title="미라콤아이앤씨 바로가기" tabindex="-1">미라콤아이앤씨</a></li>
+                            <li><a href="../../pages/mrc_cmy/MRC_CMY_002.html" title="CEO 바로가기" tabindex="-1">CEO</a></li>
+                            <li><a href="../../pages/mrc_cmy/MRC_CMY_003.html" title="연혁 바로가기" tabindex="-1">연혁</a></li>
+                            <li><a href="../../pages/mrc_cmy/MRC_CMY_004.html" title="윤리경영 바로가기" tabindex="-1">윤리경영</a></li>
+                            <li><a href="../../pages/mrc_cmy/MRC_CMY_005.html" title="직무소개 바로가기" tabindex="-1">직무소개</a></li>
+                            <li><a href="../../pages/mrc_cmy/MRC_CMY_006.html" title="복리후생 바로가기" tabindex="-1">복리후생</a></li>
+                            <li><a href="../../pages/mrc_cmy/MRC_CMY_007.html" title="IR 바로가기" tabindex="-1">IR</a></li>
+                            <li><a href="../../pages/mrc_cmy/MRC_CMY_008.html" title="찾아오시는 길 바로가기" tabindex="-1">찾아오시는 길</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <!-- mobile -->
+        <div class="mo-total-menu-inner__right">
+            <div class="mo-total-menu-inner__top">
+                <div class="depth1">
+                    <h2><button class="menu-title">미라콤의 가치</button></h2>
+                    <ul class="depth2">
+                        <li><a href="../../pages/mrc_smr/MRC_SMR_001.html" title="스마트팩토리 역량 바로가기" tabindex="-1">스마트팩토리 역량</a></li>
+                    </ul>
+                </div>
+                <div class="depth1">
+                    <h2><button class="menu-title">서비스 및 솔루션</button></h2>
+                    <ul class="depth2 category-depth">
+                        <li>
+                            <h3><button class="category-title">서비스</button></h3>
+                            <ul class="depth3">
+                                <li><a href="../../pages/mrc_srv/MRC_SRV_001.html" title="스마트팩토리 컨설팅 바로가기" tabindex="-1">스마트팩토리 컨설팅</a></li>
+                                <li>
+                                    <span>MES 구축</span>
+                                    <ul class="depth4">
+                                       <li><a href="../../pages/mrc_srv/MRC_SRV_002.html" title="On-Premise MES 바로가기" tabindex="-1"><span>On-Premise MES</span></a></li>
+                                       <li><a href="../../pages/mrc_srv/MRC_SRV_003.html" title="Cloud MES 바로가기" tabindex="-1"><span>Cloud MES</span></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../../pages/mrc_srv/MRC_SRV_004.html" title="ERP 구축 바로가기" tabindex="-1">ERP 구축</a></li>
+                                <li><a href="../../pages/mrc_srv/MRC_SRV_005.html" title="설비 자동화 바로가기" tabindex="-1">설비 자동화</a></li>
+                                <li><a href="../../pages/mrc_srv/MRC_SRV_006.html" title="제조물류 자동화 바로가기" tabindex="-1">제조물류 자동화</a></li>
+                                <li><a href="../../pages/mrc_srv/MRC_SRV_007.html" title="IT 인프라 바로가기" tabindex="-1">IT 인프라</a></li>
+                                <li><a href="../../pages/mrc_srv/MRC_SRV_008.html" title="IT 운영 (ITO) 바로가기" tabindex="-1">IT 운영 (ITO)</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3><button class="category-title">솔루션</button></h3>
+                            <ul class="depth3">
+                                <li>
+                                    <span>Nexplant MESplus</span>
+                                    <ul class="depth4">
+                                        <li>
+                                            <a href="../../pages/mrc_srv/MRC_SOL_001.html" title="MES 바로가기" tabindex="-1">
+                                                <span>
+                                                    MES
+                                                </span>
+                                                <span class="descrip">플랫폼 기반 통합생산관리</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../pages/mrc_srv/MRC_SOL_002.html" title="QMS 바로가기" tabindex="-1">
+                                                <span>QMS</span>
+                                                <span class="descrip">품질 개선을 통한 생산성 혁신</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../pages/mrc_srv/MRC_SOL_003.html" title="EES 바로가기" tabindex="-1">
+                                                <span>EES</span>
+                                                <span class="descrip">실시간 설비데이터 분석 및 엔지니어링 솔루션</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../pages/mrc_srv/MRC_SOL_004.html" title="MC 바로가기" tabindex="-1">
+                                                <span>
+                                                    MC
+                                                </span>
+                                                <span class="descrip">양방향 설비 온라인/자동화 실현</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../../pages/mrc_srv/MRC_SOL_005.html" title="MCS 바로가기" tabindex="-1">
+                                        MCS
+                                    </a>
+                                    <span class="descrip">물류설비 연동을 통한 반송/보관 제어</span>
+                                </li>
+                                <li>
+                                    <a href="../../pages/mrc_srv/MRC_SOL_006.html" title="Highway101 바로가기" tabindex="-1">
+                                        Highway101
+                                    </a>
+                                    <span class="descrip">다양한 시스템간 빠르고 쉬운 연계/통합</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3><button class="category-title">업종</button></h3>
+                            <ul class="depth3">
+                                <li><a href="../../pages/mrc_srv/MRC_IND_001.html" title="반도체/태양광​ 바로가기" tabindex="-1">반도체/태양광​</a></li>
+                                <li><a href="../../pages/mrc_srv/MRC_IND_002.html" title="전기/전자 바로가기" tabindex="-1">전기/전자</a></li>
+                                <li><a href="../../pages/mrc_srv/MRC_IND_003.html" title="오토모티브 바로가기" tabindex="-1">오토모티브</a></li>
+                                <li><a href="../../pages/mrc_srv/MRC_IND_004.html" title="배터리 바로가기" tabindex="-1">배터리</a></li>
+                                <li><a href="../../pages/mrc_srv/MRC_IND_005.html" title="식음료/제약 바로가기" tabindex="-1">식음료/제약</a></li>
+                                <li><a href="../../pages/mrc_srv/MRC_IND_006.html" title="화학/소재 바로가기" tabindex="-1">화학/소재</a></li>
+                                <li><a href="../../pages/mrc_srv/MRC_IND_007.html" title="기계/금속 바로가기" tabindex="-1">기계/금속</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="depth1">
+                    <h2><button class="menu-title">고객지원</button></h2>
+                    <ul class="depth2">
+                        <li><a href="../../pages/mrc_cus/MRC_CUS_001.html" title="인사이트 리포트 바로가기" tabindex="-1">인사이트 리포트</a></li>
+                        <li><a href="../../pages/mrc_cus/MRC_CUS_002.html" title="라이브러리 바로가기" tabindex="-1">라이브러리</a></li>
+                        <li><a href="../../pages/mrc_cus/MRC_CUS_003.html" title="언론보도 바로가기" tabindex="-1">언론보도</a></li>
+                        <li><a href="../../pages/mrc_cus/MRC_CUS_004.html" title="공지사항 바로가기" tabindex="-1">공지사항</a></li>
+                    </ul>
+                </div>
+                <div class="depth1">
+                    <h2><button class="menu-title">회사소개</button></h2>
+                    <ul class="depth2">
+                        <li><a href="../../pages/mrc_cmy/MRC_CMY_001.html" title="미라콤아이앤씨 바로가기" tabindex="-1">미라콤아이앤씨</a></li>
+                        <li><a href="../../pages/mrc_cmy/MRC_CMY_002.html" title="CEO 바로가기" tabindex="-1">CEO</a></li>
+                        <li><a href="../../pages/mrc_cmy/MRC_CMY_003.html" title="연혁 바로가기" tabindex="-1">연혁</a></li>
+                        <li><a href="../../pages/mrc_cmy/MRC_CMY_004.html" title="윤리경영 바로가기" tabindex="-1">윤리경영</a></li>
+                        <li><a href="../../pages/mrc_cmy/MRC_CMY_005.html" title="직무소개 바로가기" tabindex="-1">직무소개</a></li>
+                        <li><a href="../../pages/mrc_cmy/MRC_CMY_006.html" title="복리후생 바로가기" tabindex="-1">복리후생</a></li>
+                        <li><a href="../../pages/mrc_cmy/MRC_CMY_007.html" title="IR 바로가기" tabindex="-1">IR</a></li>
+                        <li><a href="../../pages/mrc_cmy/MRC_CMY_008.html" title="찾아오시는 길 바로가기" tabindex="-1">찾아오시는 길</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mo-total-menu-inner__left">
+                <strong class="total-menu-inner__title">고객의 성공을 <br/>만들어가는 <br/>미라콤아이앤씨</strong>
+                <div class="total-menu-inner__util">
+                    <ul class="partners">
+                        <!-- <li><a href="javascript:void(0);" target="_blank" title="Cloud MES 바로가기" tabindex="-1">Cloud MES</a></li>
+                        <li><a href="javascript:void(0);" target="_blank" title="스마트 팩토리 수준진단 바로가기" tabindex="-1">스마트 팩토리 수준진단</a></li> -->
+                        <li><a href="javascript:void(0);" target="_blank" title="문의하기 바로가기" tabindex="-1">문의하기</a></li>
+                        <li><a href="javascript:void(0);" target="_blank" title="인재채용 바로가기" tabindex="-1">인재채용</a></li>
+                    </ul>
+                    <ul class="sns">
+                        <li><a href="javascript:void(0);" title="블로그 바로가기" target="_blank" tabindex="-1"><img src="../../assets/images/icon/ico-blog.svg" alt="블로그 바로가기"></a></li>
+                        <li><a href="javascript:void(0);" title="유튜브 바로가기" target="_blank" tabindex="-1"><img src="../../assets/images/icon/ico-youtube-white.svg" alt="유튜브 바로가기"></a></li>
+                    </ul>
+                    <ul class="language">
+                        <li class="on"><a href="../../pages/main/main.html" tabindex="-1" title="국문 홈페이지로 이동">KO</a></li>
+                        <li><a href="../../pages/main/main_en.html" tabindex="-1" title="영문 홈페이지로 이동">EN</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn-close" tabindex="-1"><span class="hidden">닫기</span></button>
+</div>
+<!-- //전체메뉴 -->
     <!-- SCRIPT IMPORT -->
-    @@include('../src/pages/includes/scriptImport.html', {pageMain : false,})
+    <script src="../../assets/js/import/import.js"></script>
+
+
+
 </div>
 </body>
 </html>
