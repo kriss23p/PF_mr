@@ -1,0 +1,150 @@
+
+@charset "UTF-8";
+.btn-wrap{
+    width:100%; 
+    margin:0 auto;
+}
+.btn{
+    text-align: center;
+    @include normalTxt;
+    font-size:1.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    &.default{
+        &::after{
+            content: ''; 
+            display: inline-block; 
+            width: 2.4rem; 
+            height: 2.4rem;
+            @include backgroundImg('../../assets/images/icon/ico-arrow-radius-black-right-18.svg', center center, contain); 
+            vertical-align: middle;
+            margin:0 0 0 1rem;
+        }
+        &.ty02{
+            @include xsmallTxt;
+            font-weight: 600;
+        }
+        &.ty03{
+            @include strongTxt;
+            font-weight: 600;
+            &::after{
+                width:3.4rem;
+                height:3.4rem;
+            }
+        }
+        &.ty04{
+            &::after{
+                display:none;
+            }
+            &::before{
+                content: ''; 
+                display: inline-block; 
+                width: 2.4rem; 
+                height: 2.4rem;
+                @include backgroundImg('../../assets/images/icon/ico-arrow-radius-black-right-18.svg', center center, contain); 
+                vertical-align: middle;
+                margin:0 1rem 0 0;
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &.default02{
+        color:$white;
+        &::after{
+            content: ''; 
+            display: inline-block; 
+            width: 2.4rem; 
+            height: 2.4rem;
+            @include backgroundImg('../../assets/images/icon/ico-arrow-radius-whtie-right-18.svg', center center, contain); 
+            vertical-align: middle;
+            margin:0 0 0 1rem;
+        }
+    }
+    &.icon{
+        &::after{
+            content: ''; 
+            display: inline-block; 
+            width: 3.4rem; 
+            height: 3.4rem;
+            @include backgroundImg('../../assets/images/icon/ico-download.svg', center, contain); 
+            vertical-align: middle;
+            margin:0 0 0 0.8rem;
+        }
+        &.link{
+            &::after{
+                content: ''; 
+                display: inline-block; 
+                width: 3.4rem; 
+                height: 3.4rem;
+                @include backgroundImg('../../assets/images/icon/ico-link-arrow.svg', center, contain); 
+                vertical-align: middle;
+                margin:0 0 0 0.8rem;
+            }
+        }
+        &.down-white {
+            color: $white;
+            &::after{
+                content: ''; 
+                display: inline-block; 
+                width: 2.4rem; 
+                height: 2.4rem;
+                @include backgroundImg('../../assets/images/icon/ico-download-white.svg', center, contain); 
+                vertical-align: middle;
+                margin:0 0 0 0.8rem;
+            }
+        }
+        &.video{
+            &::after{
+                content: ''; 
+                display: inline-block; 
+                width: 3.4rem; 
+                height: 3.4rem;
+                @include backgroundImg('../../assets/images/icon/ico-video.svg', center center, contain); 
+                vertical-align: middle;
+                margin:0 0 0 0.8rem;
+            }
+        }
+    }
+    &.line{
+        @include xsmallTxt;
+        font-weight: 600;
+        text-decoration: underline;
+    }
+    &.info{
+        min-width:16rem;
+        padding:2rem;
+        background-color: $gray01;
+        @include semimTxt;
+        font-weight: 600;
+        border-radius: 1rem;
+        justify-content: space-between;
+        &::after{
+            content: ''; 
+            display: inline-block; 
+            width: 2.4rem; 
+            height: 2.4rem;
+            @include backgroundImg('../../assets/images/icon/ico-download.svg', center center, contain); 
+            vertical-align: middle;
+            margin:0 0 0 1rem;
+        }
+    }
+    &.pop{
+        min-width:11.5rem;
+        padding:1.2rem 1.6rem;
+        background-color: $black;
+        @include semimTxt;
+        font-weight: 600;
+        color: $white;
+        border-radius: 1rem;
+    }
+    &.pop02{
+        min-width:11.5rem;
+        padding:1.2rem 1.5rem;
+        @include semimTxt;
+        font-weight: 600;
+        color: $gray03;
+        border-radius: 1rem;
+        border:0.1rem solid $gray02;
+    }
+}

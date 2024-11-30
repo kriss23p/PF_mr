@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include('../src/pages/includes/guide/head.html', {title: '컴포넌트 가이드 - 미라콤'})
+
+<body>
+    <div id="wsg-wrap" class="wsg">
+        <header class="wsg-header">
+            <nav id="nav">
+                <ul>
+                    <li class=""><a href="../../index.html">포트폴리오 사이트</a></li>
+                    <li class="on"><a href="../components/wsg.html">컴포넌트</a></li>
+                </ul>
+            </nav>
+        </header>
+        <ul class="guideSubmenu">
+            <li><a href="./wsg.html" >폰트/컬러</a></li>
+            <li><a href="./button.html">버튼</a></li>
+            <li><a href="./form.html">form</a></li>
+            <li><a href="./tab.html" class="guideOn">탭</a></li>
+        </ul>
+
+        <div class="guideContainer">
+            <section class="sample">
+                <h2 class="sampleTitle">tab - sticky</h2>
+                    <div class="box-tab tab-ctrl">
+                        <!-- 탭 활성화 시 tab-ctrl 클래스 추가 -->
+                        <div class="tab-ctrl-tit">
+                            <div class="tab-tit">타이틀 지정 탭</div>
+                            <ul class="tab-btn-wrap">
+                                <li class="on"><a href="javascript:;">tab - titleA</a></li>
+                                <li><a href="javascript:;">tab - titleB</a></li>
+                                <li><a href="javascript:;">tab - titleC</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            </section>
+            <section class="sample">
+                <h2 class="sampleTitle">tab - sticky</h2>
+                    <div class="box-tab tab-ctrl">
+                        <ul class="tab-btn-wrap">
+                            <!-- tab-ctrl 클래스 없을 시, 활성화 된 메뉴에 on class 추가 -->
+                            <li class="on"><a href="javascript:;">기본 sticky 탭</a></li>
+                            <li><a href="javascript:;">tabA</a></li>
+                            <li><a href="javascript:;">tabB</a></li>
+                            <li><a href="javascript:;">tabC</a></li>
+                        </ul>
+                    </div>
+            </section>
+            <section class="sample">
+                <h2 class="sampleTitle">tab - sticky 새로형식 페이지 이동</h2>
+                    <div class="box-tab tab-ctrl">
+                        <div class="tab-ctrl-list">
+                            <ul class="tab-btn-wrap">
+                                <!-- tab-ctrl 클래스 없을 시, 활성화 된 메뉴에 on class 추가 -->
+                                <li class="on"><a href="javascript:;">pageA</a></li>
+                                <li><a href="javascript:;">pageB</a></li>
+                                <li><a href="javascript:;">pageC</a></li>
+                                <li><a href="javascript:;">pageD</a></li>
+                                <li><a href="javascript:;">pageE</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            </section>
+            <section class="sample bg-bl">
+                <h2 class="sampleTitle">tab 기본 - white</h2>
+                    <div class="box-tab tab-ctrl">
+                        <!-- 탭 활성화 시 tab-ctrl 클래스 추가 -->
+                        <div class="tab-ctrl-radius tab-radius-white">
+                            <ul class="tab-btn-wrap">
+                                <li class="on"><a href="javascript:;">tabA</a></li>
+                                <li><a href="javascript:;">tabB</a></li>
+                                <li><a href="javascript:;">tabC</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            </section>
+            <section class="sample">
+                <h2 class="sampleTitle">tab 기본 - black</h2>
+                    <div class="box-tab tab-ctrl">
+                        <!-- 탭 활성화 시 tab-ctrl 클래스 추가 -->
+                        <div class="tab-ctrl-radius">
+                            <ul class="tab-btn-wrap">
+                                <li class="on"><a href="javascript:;">tabA</a></li>
+                                <li><a href="javascript:;">tabB</a></li>
+                                <li><a href="javascript:;">tabC</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            </section>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('../src/pages/includes/scriptImport.html', {pageMain : false,})
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+// Fonts
+$en: "Heebo", "Pretendard", "Malgun Gothic", "맑은 고딕", "돋움", Dotum, "굴림", Gulim, Tahoma, Verdana, Geneva, sans-serif, Apple Gothic, AppleGothic;
+$kr: "Pretendard", "Malgun Gothic", "맑은 고딕", "돋움", Dotum, "굴림", Gulim, Tahoma, Verdana, Geneva, sans-serif, Apple Gothic, AppleGothic;
+$roboto-mono: 'Roboto Mono', monospace, "Pretendard", "Malgun Gothic", "맑은 고딕", "돋움", Dotum, "굴림", Gulim, Tahoma, Verdana, Geneva, sans-serif, Apple Gothic, AppleGothic;
+
+$white: #fff;
+$gray01: #F4F4F4;
+$gray02: #E5EBF4;
+$gray03: #C9CDD6;
+$gray04: #70747D;
+$gray05: #617498;
+$gray06: #484C51;
+$gray07: #70747D;
+$gray08: #617498;
+$black: #050505;
+$violet: #641BDF;
+$lime: #DAFF01;
+$red: #E90247;
+$blue01: #0057FF;
+$blue02: #003CAF;
+$blue03: #76EBF2;
+$blue04: #80ABFF;
+$blue05: #14299F;
+$blue06: #337BCB;
+// dim
+$dim: #05050540;
+
+$text-shadow-1: 0px 0px 30px rgba(0, 0, 0, 0.1);
+$text-shadow-2: 0px 0px 30px rgba(0, 0, 0, 0.5);
+
+$palette-gradient-01: linear-gradient(to right, #0057FF, #E6EEFF);
+$palette-gradient-02: linear-gradient(to right, #003CAF, #E6ECF7);
+$palette-gradient-03: linear-gradient(to right, #76EBF2, #F1FDFE);

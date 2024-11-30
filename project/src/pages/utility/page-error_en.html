@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+@@include('./pages/includes/head_en.html', {
+    pageTitle : "error page - Miracom",
+    ogTitle: "error page - Miracom",
+    ogDesc: "This is an error page.",
+    metaDescription: "This is an error page.",
+    metaKeywords: "MIRACOMINC, Miracom, Error, error page, error statement",
+    ogUrl: "https://miracom-inc.com",
+    ogImage: "../../assets/images/og/miracom-og.png",
+    ogType: "article",
+    cssPath : "../../assets/css/common.min.css"
+})
+</head>
+<body>
+<div id="wrap">
+
+    <main class="container" id="goto-conts">
+        <div class="sub-conts">
+            <div class="message">
+                <div>
+                    <img src="../../assets/images/icon/ico-error.svg" alt="">
+                </div>
+                <h2 class="conts-title">Contact your system administrator</h2>
+                <!-- <p class="normal-title">Contact your system administrator.</p> -->
+                <div class="btn-wrap">
+                    <a href="#" class="btn default">Go to HOME</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- SCRIPT IMPORT -->
+    @@include('../src/pages/includes/scriptImport.html', {pageMain : false,})
+</div>
+</body>
+</html>

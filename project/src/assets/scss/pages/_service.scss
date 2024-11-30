@@ -1,0 +1,3672 @@
+main {
+    transition: background-color 0.3s linear;
+    &.bgOn {
+        background-color: #f4f4f4;
+        transition: background-color 0.3s linear;
+    }
+}
+.mt0{
+    margin-top: 0 !important;
+}
+.mt40{
+    margin-top: 4rem !important;
+}
+
+.mo-touch-scroll{
+    width:100%; overflow:hidden;
+   img{
+    width:100%;
+   }
+       
+}
+.check-list-wrap{
+    display: none !important;
+}
+.check-list{   
+    li{
+        background:#f4f4f4; padding:2.8rem;  border-radius: 1rem;
+        font-size:1.8rem; font-weight: 400; margin-bottom: 2rem;
+        position: relative;padding-left:4rem;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            background: url(../../../assets/images/subpages/mrc_srv_01_icon_check.svg);
+            position: absolute;
+            top:2.5rem;
+            left: 2rem;
+            background-size: contain;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    } 
+}
+
+//공통 레이아웃
+ul.flexLayout {
+    display: flex;
+    &_01 {
+        gap:2rem;
+        flex-wrap: wrap;
+        & >li{ 
+            flex: 1 1 30%;
+            padding:3rem;
+            border-radius: 1rem;
+            background-color: $gray01;
+            &:last-child {
+                margin-top: 8rem;
+            }
+            dl {
+                border-top:0.1rem solid $gray03;
+                margin-top: 2rem;
+                dt {
+                    font-size: 2rem;
+                    color: $blue01;
+                    margin:4rem 0 2rem 0;
+                }
+                dd {
+                    font-size: 1.8rem;
+                    line-height: 170%;
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        width: 0.2rem;
+                        height: 0.2rem;
+                        background-color:$gray06;
+                        border-radius: 50%;
+                        vertical-align: middle;
+                        margin-right: 0.8rem;
+                    }
+                }
+            }
+        }
+    } 
+    &_02 {
+        gap:2rem;
+        li {
+            width: 50%;
+            border-radius: 1rem;
+            background-color: $gray01;
+            overflow: hidden;
+            dl {
+                dt {
+                    color:$white;
+                    text-align: center;
+                    background-color: $gray06;
+                    padding: 2rem 0;
+                    font-size: 2.6rem;
+                    font-weight: 600;
+                }
+                dd {
+                    padding:4rem;
+                    ul {
+                        display: block;
+                        li {
+                            width: 100%;
+                            border-radius: 0rem;
+                            font-size: 1.8rem;
+                            line-height: 170%;
+                            margin-bottom: 0.8rem;
+                            position: relative;
+                            padding-left:0.8rem;
+                            &::before {
+                                position: absolute;
+                                top:1.2rem;
+                                left:0;
+                                content: '';
+                                display:inline-block;
+                                width: 0.2rem;
+                                height: 0.2rem;
+                                background-color: $gray06;
+                                border-radius: 50%;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_03 {
+        &.cardList-ico-right{
+            li{
+                position: relative;
+                dl{
+                    padding-bottom: 11rem;
+                }
+                & > img{
+                    position: absolute; bottom:3rem; right:3rem; width:9rem;
+                }
+            }
+        }
+        gap:2rem;
+        li {
+            width: 50%;
+            background-color: $gray01;
+            border-radius: 1rem;
+            padding: 3rem;
+            dl {
+                dt {
+                    margin-bottom: 2rem;
+                }
+                dd{ 
+                    word-break: break-all;
+                    font-size: 1.8rem;
+                    font-weight: 40rem;
+                    line-height: 170%;
+                    margin-bottom: 0.8rem;
+                    position: relative;
+                    padding-left: 0.8rem;
+                    &::before {
+                        position: absolute;
+                        top:1.2rem;
+                        left: 0;                        
+                        content: '';
+                        display: block;
+                        width: 0.2rem;
+                        height: 0.2rem;
+                        background-color:$gray06;
+                        border-radius: 50%;
+                    }
+                    &:last-child{
+                        margin-top: 0rem;
+                    }
+                }
+            }
+        }
+    }
+    &_04 {
+        gap: 2rem;
+        justify-content: space-between;
+        > li {
+            width: 50%;
+            .accordian {
+                margin-bottom: 6rem;
+                &:last-child {
+                    margin-bottom: 0rem;
+                }
+                .acc-trigger {
+                    font-weight: 600;
+                }
+                .acc-conts{
+                    .mo-img {
+                        display: none;
+                    }
+                    .hashtag_box{
+                        margin:2rem 0 0 0;
+                        span{
+                            @include semimTxt;
+                            color: #70747D;
+                            display:inline-block;
+                            margin:0 0 0 1rem;
+                            opacity: 0.8;
+                            &:first-child{
+                                margin:0;
+                            }
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                position: sticky;
+                top:0;
+                max-height:52rem;
+                right:0;
+                margin-left: auto;
+                max-width: 52rem;
+                img {
+                    display: block;
+                    position: absolute;
+                    visibility: hidden;
+                    border-radius: 1rem;        
+                    width: 100%;
+                    max-width: 52rem;
+                    opacity: 0;
+                    transition: opacity 0.3s linear;
+                    &.on {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+            
+        }
+    }
+    &_05 {
+        gap: 1.8rem;
+        justify-content: space-around;
+        li {
+            width: 25%;
+            padding: 3rem;
+            background-color: $gray01;
+            border-radius: 1rem;
+            dl {
+                dt {
+                    font-size: 4.2rem;
+                    color:$gray03;
+                    border-bottom: 0.1rem solid $gray03;
+                    padding-bottom: 2rem;
+                    margin-bottom: 4rem;
+                }
+                dd {
+                    &:nth-of-type(2) {
+                        margin-top:2rem;
+                        font-size: 1.8rem;
+                        color: $gray06;
+                        line-height: 170%;
+                    }
+                }
+            }
+        }
+    }
+    &_06 {
+        display: block;
+        li {
+            display: flex;
+            column-gap: 6rem;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6rem;
+            &:last-child {
+                margin-bottom: 0rem;
+            }
+            &.reverse {
+                flex-direction: row-reverse;
+            }
+            img{
+                width: 50%;
+                border-radius: 1rem;
+            }
+            dl {
+                width: 50%;
+                dt {
+                    font-size: 1.6rem;
+                    color:$gray06;
+                    line-height: 140%;
+                    margin-bottom: 2rem;
+                }
+                dd {
+                    &:nth-of-type(1) {
+                        margin-bottom: 4rem;
+                    }
+                    ul {
+                        li {
+                            display: block;
+                            font-size: 1.8rem;
+                            color:$gray06;
+                            line-height: 170%;
+                            margin-bottom: 1.4rem;
+                            position: relative;
+                            padding-left: 2.8rem;
+                            //체크아이콘
+                            &::before {
+                                content: '';
+                                display: inline-block;
+                                width: 2rem;
+                                height: 2rem;
+                                background: url(../../../assets/images/subpages/mrc_srv_01_icon_check.svg);
+                                position: absolute;
+                                top:0.5rem;
+                                left: 0rem;
+                                background-size: contain;
+                            }
+                            &:last-child {
+                                margin-bottom: 0rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_07 {
+        flex-direction: column;
+        .card-img-box{
+            display: flex;
+            align-items: center;
+            gap: 0 5rem;
+            margin:0 0 8rem 0;
+            img{
+                border-radius: 1rem;
+                width: calc(50% - 2rem)
+            }
+            dl{
+                display: flex;
+                gap: 4rem 0;
+                flex-direction: column;
+                dt{
+                    @include strongTxt;
+                    font-weight: 600;
+                }
+                dd{
+                    @include semimTxt;
+                    font-size: 1.8rem;
+                    line-height: 170%;
+                    color: $gray06;
+                }
+            }
+        }
+        li {
+            ul{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 2rem 2%;
+                li{
+                    width: 49%;
+                    @include semimTxt;
+                    font-size: 1.8rem;
+                    color:$gray06;
+                    padding: 2rem 2rem 2rem 4rem;
+                    border-radius: 1rem;
+                    background-color: $gray01;
+                    min-height: 10.2rem;
+                    box-sizing: border-box;
+                    position: relative;
+                    //체크아이콘
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 2rem;
+                        height: 2rem;
+                        background: url(../../../assets/images/subpages/mrc_srv_01_icon_check.svg) no-repeat;
+                        background-size: contain;
+                        position: absolute;
+                        left: 1rem;
+                    }
+                }
+            }
+            &:last-child {
+                margin-bottom: 0rem;
+            }
+        }
+        .list_info_txt_box{
+            margin:0.8rem 0 0 0;
+            span{
+                display:inline-block;
+                @include xsmallTxt;
+                color: $gray07;
+                line-height: 1.7;
+            }
+        }
+    }
+    &_08 {
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(25%, auto));
+        gap:6rem 2rem;
+       li{
+            img{
+                width:100%; max-width:38.4rem; margin:0 auto; display: block;
+            }
+            &.logo_tit {
+                width: 100%;
+            }
+       }
+    }
+    &_09 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        li {
+            padding: 3rem 2rem;
+            border-radius: 1rem;
+            background-color: $gray01;
+            display: flex;
+            align-items: center;
+            column-gap: 4rem;
+            p {
+                font-size: 2.4rem;
+                font-weight: 600;
+            }
+        }
+    }
+    &_10 {
+        column-gap: 2rem; display: flex; 
+        & >li {
+            width:32%;
+            padding: 4rem;
+            border-radius: 1rem;
+            border: 0.1rem solid $gray03;
+            position: relative;
+            p{
+                font-size: 2.6rem;
+                font-weight: 600;
+                line-height: 140%;
+                padding-bottom: 11rem;
+            }
+            img {
+
+                &.people {
+                    position: absolute;
+                    display: block;
+                    margin-left: auto;
+                    margin-top: 2rem;
+                    width: 9rem;
+                    bottom: 3rem;
+                    right: 3rem;
+                }
+            }
+        }
+        &.slick-card-slider{
+            .card-slider-list{
+                width:100%; border:1px solid #C9CDD6; padding:3rem 2rem; border-radius: 1rem;
+                p{
+                    font-weight: 600; font-size: 2rem;
+                }
+                .people{
+                    margin-left:auto; width: 10rem; margin-top: 4rem;
+                }
+            }
+        }
+    }
+    &_11 {
+        display: flex;
+        column-gap: 2rem;
+        width: 100%;
+        li {
+            border-radius: 1rem;
+            overflow: hidden;
+            width: 33.3333%;
+            img {
+                display: block;
+                width: 100%;
+            }
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 14.2rem;
+                padding:4rem;
+                background-color: $gray01;
+                text-align: center;
+                font-size: 1.8rem;
+                line-height: 170%;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+
+
+    &_12 {
+        display: flex;
+        flex-wrap: wrap;
+        gap:1.8rem 1.8rem;
+        li {
+            flex: 1 1 20%;
+            background-color: $gray02;
+            border: 1rem;
+            padding: 4rem;
+            border-radius: 1rem;
+            dl {
+                text-align: center;
+                padding-bottom: 2rem;
+                border-bottom: 0.1rem solid $gray03;
+                dt {
+                    font-size: 2.6rem;
+                    font-weight: 600;
+                    line-height: 140%;
+                    margin-bottom: 1rem;
+                }
+                dd {
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    line-height: 140%;
+                    color: $gray06;
+                }
+                
+            }
+            p {
+                margin-top: 3rem;
+                font-size: 1.8rem;
+                line-height: 170%;
+                color: $gray06;
+            }
+        }
+    }
+}
+
+// 로고 더보기 
+.load-more {
+    .load-btn {
+        width: 100%;
+        text-align: center;
+        color: $gray07;
+        font-size: 1.4rem;
+        line-height: 140%;
+        font-weight: 600;
+        border-top: 0.1rem solid $gray02;
+        padding: 1.1rem 0;
+        margin: 4rem 0 0 0;
+        display: none;
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url(../../../assets/images/icon/ico-toggle-arrow-down.svg) no-repeat;
+            vertical-align: middle;
+            margin-left: 0.6rem;   
+        }
+    }
+}
+
+//소개영상
+.videoWrap { 
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    max-width: 133rem;
+    height: 66rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    img {
+        display: block;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+    }
+    .videoDesc {
+        background-color: $white;
+        padding:4rem;
+        position: absolute;
+        bottom:0;
+        left:0;
+        border-top-right-radius: 1rem;
+        width:100%;
+        max-width: 60.5rem;
+        span {
+            font-size: 1.8rem;
+            color: $gray06;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        h6 {
+            font-size: 2.6rem;
+            font-weight: 600;
+        }
+        p {
+            font-size: 1.8rem;
+            line-height: 170%;
+            margin-top: 6rem;
+        }
+    }
+}
+
+// 동영상 팝업 관련 
+.video_layer_popup {
+    display: none;
+    &.play {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999999;
+        .video_layer_popup-closer {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, .5);
+            cursor: pointer;
+            
+        }
+    }
+
+    .video-wrapper {
+        position: relative;
+        width:50%;
+        padding-top:3rem;
+        height:0;
+        padding-bottom: 28.125%;
+        z-index: 10;
+        iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top:0; left:0;
+        }
+       .closeIcon{
+            display: block;
+            width: 6rem;
+            height: 6rem;
+            background: url(../../../assets/images/icon/ico-videop_popup_closer.svg);background-size: cover;
+            cursor: pointer;
+            position: absolute;
+            left: 50%;
+            top: 0%; margin-top:-6.5rem;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+// 스틱키네브
+.sticky-layout {
+    display: flex;
+    gap: 9rem;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 12rem;
+    &.row{
+        nav{
+            ul{
+                flex-direction: row; 
+                &.tab-btn-wrap{
+                    flex-wrap: nowrap;
+                }
+            }
+        }  
+    }
+    &.eng {
+        nav {
+            ul {
+                top: 21rem;
+                li a {
+                    &.on {
+                        &::after {
+                            position: absolute;
+                            right: -0.7rem;
+                            top: -0.3rem;
+                            margin-top: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    nav {
+        flex-shrink: 0;
+        
+        ul {
+            width: 18rem;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            position: sticky;
+            top: 150px;
+            z-index: 2;
+            li a {
+                display: inline-flex;
+                align-items: center;
+                position: relative;
+                transition: color 0.3s;
+                font-size: 1.6rem;
+                font-weight: 600;
+                color:$gray04;
+                &::after {
+                    display: none;
+                    content: "";
+                    width: 0.6rem;
+                    height: 0.6rem;
+                    background-color: $blue01;
+                    margin-left: 0.5rem;
+                    border-radius: 50%;
+                }
+                &.on {
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    color:$black;
+                    &::after {
+                        display: block;
+                        content: "";
+                        width: 0.6rem;
+                        height: 0.6rem;
+                        background-color: $blue01;
+                        margin-left: 0.6rem;
+                        border-radius: 50%;
+                        margin-top:-1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    .right {
+        flex-grow: 1;
+        width: calc(100% - 25rem);
+        .box-contents-wrap {
+            position: relative;
+            article {
+                margin-bottom: 20rem;
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+                .tit-box {
+                    h4 {
+                        font-size: 3.4rem;
+                        font-weight: 600;
+                    }
+                    p {
+                        font-size: 2rem;
+                        margin-top:1rem;
+                        color: $gray06;
+                        line-height: 1.6;
+                    }
+                    .info_txt{
+                        @include xsmallTxt;
+                        color: $gray04;
+                        margin:0.8rem 0 0 0;
+                    }
+                }
+                .cont-box {
+                    margin-top:8rem;
+                    &-tit {
+                        font-size: 2.6rem;
+                        font-weight: 600;
+                        line-height: 140%;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+//서브비쥬얼
+.sub-conts-wide {
+    .stickTabContainer {
+        .stickyTab {
+            width: 100%;
+            background-color: $white;
+            z-index: 2;
+            &.box-tab {
+                padding: 2.6rem 0 2.6rem;
+                margin: 0;
+                .tab-ctrl-tit { 
+                    justify-content: center;
+                }
+                .tab-btn-wrap { 
+                    justify-content: center;
+                }
+            }
+            
+        }
+    }
+}
+
+.mo-slide-wrap {
+    overflow: hidden;
+    > .swiper-container {
+        display: none;
+    }
+}
+
+.service {
+    //하단 배너
+    .banner {
+        max-width: 133rem;
+        margin-left: auto;
+        dl {
+            width: 100%;
+            height: 43rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background: url(../../../assets/images/subpages/mrc_ind_bannerImg.png);
+            border-radius: 1rem;
+            padding: 8rem 3rem;
+            dt {
+                color:$white; 
+                font-size: 4.2rem;
+                line-height: 140%;
+                margin-bottom: 12.6rem;
+                font-weight: 600 ;
+            }
+        }
+    }
+    .num_point{
+        font-size:3.1rem !important;
+        color:#050505;
+        font-weight: 600 !important;
+    }
+    .card-slider-container {
+        overflow: hidden;
+        .indicatorBox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 10px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 4rem;
+            .card-dots {
+                .slick-dots {
+                    position: relative; top:0; left:50%; display: flex; gap:0.8rem; align-items: center; 
+                    justify-content: center; transform: translateX(-50%); cursor: pointer;
+                        li{
+                            width:0.6rem; height:0.6rem; border-radius: 100%; background:#C9CDD6; font-size: 0; opacity: 1;
+                            &.slick-active{
+                                background:#050505; width:1.4rem;border-radius: 3rem;
+                                button{
+                                    &:focus{
+                                        outline: none;
+                                        box-shadow: 0 0 2px 2px #51a7e8;
+                                        border:1px solid #51a7e8;
+                                        height:0.6rem; 
+                                        width:1.4rem;border-radius: 3rem;
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                            button{
+                                &:focus{
+                                    outline: none;
+                                    box-shadow: 0 0 2px 2px #51a7e8;
+                                    border:1px solid #51a7e8;
+                                    width:0.6rem; height:0.6rem; 
+                                    border-radius: 100%;
+                                    opacity: 1;
+                                }
+                            }
+
+                        }
+                    }
+            }
+            .prev-arrow {
+                width: 28px;
+                height: 28px;
+                cursor: pointer;
+                background: url(../../../assets/images/icon/ico-slick-arrow-prev.svg);
+            }
+            .next-arrow {
+                width: 28px;
+                height: 28px;
+                cursor: pointer;
+                background: url(../../../assets/images/icon/ico-slick-arrow-next.svg);
+            }
+        }
+    }
+    .slick-card-slider{
+        margin: 0 -2rem;
+        .card-slider-list{
+            margin: 0 2rem; height: auto;
+            overflow: hidden;
+        }
+    }
+    .single-table-card{
+        overflow: hidden;border-radius:1rem;
+        .tit{
+            background: #484C51; color:#fff; font-size: 2rem; text-align: center; padding:1.4rem 0; 
+        }
+        .img{
+            width:100%; height: 20rem;
+            img{
+                width:100%; height: 100%; object-fit: cover;
+            }
+        }
+        .desc{
+            background:#F4F4F4; padding:2rem; min-height:15rem;overflow: hidden; border-radius: 0 0 1rem 1rem;
+            p{
+                position: relative; padding-left:1rem;
+                &::before{
+                    content: '';
+                    display: block; position: absolute; 
+                    width:2px; height:2px; border-radius: 100%; background:#484C51;left:0; top:1.2rem;
+                }
+            }
+        }
+    }
+
+    &.eng {
+        .cont-box-tit {
+            font-size: 2.2rem !important;
+        }
+
+        ul.flexLayout_02  {
+            li {
+                dl {
+                    dt {
+                        font-size: 2.2rem;
+                        padding:2rem 2rem;
+                    }
+                }
+            }
+        }
+        ul.flexLayout_03{
+            li{
+                dl{
+                    dd{
+                        word-break: break-word;
+                    }
+                }
+            }
+        }
+        .service-01 {
+            article {
+                &.ch1 {
+                    .cont-box {
+                        .flexLayout_03 {
+                            li{
+                                &:nth-of-type(1) {
+                                    span {
+                                        bottom: -4.5rem;
+                                    }
+                                }
+                                dl {
+                                    dd {
+                                        word-break: break-word;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.ch3 {
+                    .cont-box {
+                        ul.flexBox {
+                            li {
+                                &:last-child {
+                                    div {
+                                        p {
+                                            font-size: 2.3rem;
+                                            line-height: 130%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.ch4 {
+                    .cont-box {
+                        dl {
+                            dd {
+                                word-break: break-word;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .service-02 {
+            .ch6 {
+                .flexLayout_04 {
+                    .accordian {
+                        &:nth-of-type(2) {
+                            .acc-conts{
+                                li {
+                                    dt {width: 50%;}
+                                }
+                            }
+                        }   
+                    }   
+                }
+            }
+        }
+        .service-03 {
+            .ch1 {
+                .cont-box {
+                    img {
+                        margin: 0 auto;
+                    }
+                }
+            }
+            .ch5 {
+                .flexLayout_04 {
+                    .accordian {
+                        &:nth-of-type(1) {
+                            .acc-conts {
+                                ul.chart.grow_wrap{
+                                    .arrowBox {
+                                        justify-content: initial;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .service-04 {
+            .ch2 {
+                dl {
+                    dt {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        min-height: 10rem;
+                    }
+                }
+            }
+            .ch4 {
+                dl {
+                    dd {
+                        word-break: break-word;
+                    }
+                }
+            }
+        }
+        .service-06 {
+            .ch2 {
+                .cont-box{
+                    .box-tab{
+                        .tab-contents-wrap{
+                            .innerWrap{
+                                .innerConts{
+                                    table{
+                                        tfoot{
+                                            .desc td{
+                                                height:24.3rem;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }      
+            .ch3 {
+                dl {
+                    dt {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        min-height: 10.2rem;
+                    }
+                }
+            }
+        }
+        .service-07{
+            .ch2 {
+                .cont-box{
+                    ul{
+                        li{
+                            p{
+                                border-radius: 0 0 1rem 1rem; word-wrap: break-word;
+                            }
+                            .notice{
+                                margin-top: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .service-10 {
+            .ch2 {
+                ul.flexLayout_11 {
+                    li {
+                        p {
+                            height: 20.2rem;
+                        }
+                    }
+                }
+            }
+            .ch3 {
+                ul.flexLayout_03 {
+                    li {
+                        dl {
+                            dd {
+                                word-break: keep-all;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .service-11{
+            .flexLayout_11{
+                li{
+                    p{
+                        height:23rem; line-height: 1.4;
+                    }
+                }
+            }
+            .ch3 {
+                ul.flexLayout_03 {
+                    li {
+                        dl {
+                            dd {
+                                sup {
+                                    vertical-align: super;
+                                }
+                                span.notice {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .service-13 {
+            .ch6 {
+                ul.flexLayout_03 {
+                    li {
+                        dl {
+                            dd {
+                                word-break: keep-all;
+                            }
+                        } 
+                    }
+                } 
+            }
+        }
+    }
+    //스마트팩토리 컨설팅
+    &-01 {
+        article {
+            &.ch1 {
+                position: relative;
+                .cont-box {
+                    .flexLayout_03 {
+                        flex-wrap: wrap;
+                        column-gap: 2rem;
+                        row-gap: 6.8rem;
+                        li {
+                            flex: 1 1 40%;
+                            .cont-box-tit{
+                                margin-bottom: 2rem;
+                            }
+                            dl {
+                                dt {
+                                    font-size: 2rem;
+                                    color: $blue01;
+                                    margin-bottom: 2rem;
+                                }
+                            }
+                            img {
+                                display: block;
+                                margin-left: auto;
+                            }
+                            &:nth-of-type(1) {
+                                position: relative;
+                                span {
+                                    display: block;
+                                    position: absolute;
+                                    bottom:-2.8rem; 
+                                    left: 0;
+                                    font-size: 1.4rem;
+                                    line-height: 140%;
+                                    color: $gray07;
+                                }
+                            }
+                            &:nth-of-type(3) {
+                                position: relative;
+                                span {
+                                    display: block;
+                                    position: absolute;
+                                    bottom:-2.8rem; 
+                                    left: 0;
+                                    font-size: 1.4rem;
+                                    line-height: 140%;
+                                    color: $gray07;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.ch3 {
+                .cont-box {
+                    ul.flexBox {
+                        display: flex;
+                        gap: 8rem;
+                        flex-wrap: wrap;
+                        position: relative;
+                        li {
+                            flex : 1 1 30%;
+                            background-color: $white;
+                            border-radius: 1rem;
+                            padding:3rem;
+                            border:0.1rem solid #C9CDD6;
+                            &:last-child {
+                                position: absolute;
+                                top:50%; left: 50%;
+                                transform: translate(-50%, -50%);
+                                background-color: transparent;
+                                border:none;
+                                div {
+                                    background-color:$blue01;
+                                    border-radius: 50%;
+                                    width: 20rem; height: 20rem;
+                                    z-index: 100;
+                                    p {
+                                        color:$white;
+                                        font-size: 3.2rem;
+                                        font-weight: 600;
+                                        line-height: 140%;
+                                        text-align: center;
+                                        position: absolute;
+                                        top:50%; left: 50%;
+                                        transform: translate(-50%, -50%);
+                                    }
+                                }
+                            }
+                            span {
+                                font-size: 1.6rem;
+                                color: $gray06;
+                                font-weight: 600;
+                                margin-bottom: 2rem;
+                                text-align: center;
+                                display: block;
+                                b {
+                                    font-size: 2.6rem;
+                                    font-weight: 600;
+                                }
+                            }
+                            dl {
+                                dt {
+                                    margin-bottom: 4rem;
+                                    text-align: center;
+                                }
+                                dd {
+                                    font-size: 1.8rem;
+                                    margin-bottom: 1.4rem;
+                                    position: relative;
+                                    padding-left: 2.8rem;
+                                    line-height: 170%;
+                                    //체크아이콘
+                                    &::before {
+                                        content: '';
+                                        display: block;
+                                        width: 2rem;
+                                        height: 2rem;
+                                        background: url(../../../assets/images/subpages/mrc_srv_01_icon_check.svg);
+                                        position: absolute;
+                                        left: 0;
+                                        top:0.2rem;
+                                    }
+                                    
+                                    &:last-child {
+                                        margin-bottom: 0rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .slider-list-load {
+                        display: none;
+                        ul.slick-card-slider {
+                            display: flex;
+                            position: relative; margin: 0 -30px;
+                            li {
+                                background-color: $white;
+                                margin: 0 30px;
+                                border-radius: 1rem;
+                                padding:4rem;
+                                span {
+                                    font-size: 1.6rem;
+                                    color: $gray06;
+                                    font-weight: 600;
+                                    margin-bottom: 2rem;
+                                    text-align: center;
+                                    display: block;
+                                    b {
+                                        font-size: 2.6rem;
+                                        font-weight: 600;
+                                    }
+                                }
+                                dl {
+                                    dt {
+                                        margin-bottom: 6rem;
+                                        text-align: center;
+                                    }
+                                    dd {
+                                        font-size: 1.8rem;
+                                        margin-bottom: 1.4rem;
+                                        position: relative;
+                                        padding-left: 2.8rem;
+                                        line-height: 170%;
+                                        //체크아이콘
+                                        &::before {
+                                            content: '';
+                                            display: block;
+                                            width: 2rem;
+                                            height: 2rem;
+                                            background: url(../../../assets/images/subpages/mrc_srv_01_icon_check.svg);
+                                            position: absolute;
+                                            left: 0;
+                                            top:0.2rem;
+                                        }
+                                        
+                                        &:last-child {
+                                            margin-bottom: 0rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .circle {
+                            background-color: $blue01;
+                            width: 18rem;
+                            height: 18rem;
+                            border-radius: 50%;
+                            margin: 0 auto 4rem auto;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            p {
+                                color: $white;
+                                font-size: 2.4rem;
+                                font-weight: 600;
+                                line-height: 140%;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+            &.ch4 {
+                .cont-box {
+                    .flexLayout_03 {
+                        li {
+                            img {
+                                display: block;
+                                margin: 0 auto;
+                            }
+                            dl {
+                                dt {
+                                    text-align: center;
+                                    margin-bottom: 4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .banner {
+            dl {
+                background-image: url(../../../assets/images/subpages/mrc_srv_01_img06.png);
+            }
+        }
+    }
+
+    //On-Premise 
+    &-02 {
+        article {
+            &.ch1 {
+                .flexLayout_05 {
+                    margin-top:8rem;
+                    li {
+                        padding:4rem 2rem;
+                        dl {
+                            text-align: center;
+                            
+                        }
+                    }   
+                }
+                .cont-box{
+                    img{
+                        max-width:100%; margin:0 auto;
+                    }
+                }
+            }
+            &.ch3 {
+                .banner {
+                    margin-top:20rem;
+                    dl {
+                        background: url(../../../assets/images/subpages/mrc_srv_02_img03.png);
+                        dt {
+                            margin-bottom: 0rem;
+                        }
+                        dd {
+                            &:nth-of-type(1) {
+                                font-size: 2rem;
+                                font-weight: 400;
+                                color:$white;
+                                line-height: 140%;
+                                margin: 3rem 0 4rem 0;
+                            }
+                        }
+                    }
+                }
+            }
+            &.ch5{
+                .cont-box{
+                    img{
+                        max-width: 100%;
+                    }
+                }
+            }
+            &.ch6 {
+                .flexLayout_04 {
+                    .acc-conts {
+                        ul.chart {
+                            display: flex;
+                            background-color: $gray01;
+                            padding:4rem;
+                            flex-wrap: wrap;
+                            column-gap: 3.6rem;
+                            row-gap: 4rem;
+                            border-radius: 1rem;
+                            li {
+                                flex: 1 1 40%;
+                                border-bottom: 0.1rem solid $gray03; 
+                                padding-bottom: 2rem;  
+                                dl { 
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+
+                                    dt {
+                                        > span {
+                                            display: block;
+                                            font-size: 1.6rem;
+                                            font-weight: 600;
+                                            line-height: 140%;
+                                            color: $black;
+                                        }
+                                        p { 
+                                            font-size: 1.4rem; color:#70747D;
+                                            font-weight: 400;
+                                            img {
+                                                vertical-align: middle;
+                                            }
+                                        }
+                                    }
+                                    dd {
+                                        font-size: 3.2rem;
+                                        color: $black;
+                                        font-weight: 600;
+                                        img {
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                        }
+                                        &.arrowBox {
+                                            position: relative;
+                                            padding-right: 4rem;
+                                            > img.arrow {
+                                                display: block;
+                                                position: absolute;
+                                                right: 0;
+                                                top: 50%;
+                                                transform: translate(0,-50%);
+                                            }
+                                        }
+                                    }
+                                }
+                                &:last-child {
+                                    img {
+                                        display: inline-block;
+                                        opacity: 1;
+                                        visibility: visible;
+                                        width: initial;
+                                        position: initial;
+                                    }
+                                }
+                            }
+                        }
+                        > span {
+                            display: block;
+                            margin-top: 0.8rem;
+                            font-size: 1.4rem;
+                            line-height: 140%;                                    
+                        }
+                        > p {
+                            font-size: 1.8rem;
+                            line-height: 170%;
+                            margin-top: 3rem ;
+                        }
+                        ul.hashtag {
+                            display: flex;
+                            column-gap: 1.4rem;
+                            margin-top: 2rem;
+                            > li {
+                                width: initial;
+                                font-size: 1.6rem;
+                                color: #70747D;
+                                margin-left: initial;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Cloud MES
+    &-03 {
+        .ch1 {
+            .flexLayout_05 {
+                margin-top:8rem;
+                li {
+                    width: 33.333%;
+                    text-align: center;
+                }
+            }
+            .cont-box{
+                img{
+                    max-width:100%;
+                }
+            }
+        }
+        .ch2 {
+            .flexLayout_02 {
+                dd {
+                    font-weight: 400;
+                    font-size: 1.8rem;
+                    line-height: 170%;
+                    text-align: center;
+                    ul {
+                        li{
+                            &::before {
+                                content: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ch4 {
+            .cont-box {
+                .videoWrap { 
+                    background: url(../../../assets/images/subpages/mrc_srv_03_videoImg01.png);  background-position: center;
+                    .videoDesc {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
+        .ch6 {
+            ul {
+                display: flex;
+                column-gap: 2rem;
+                width: 100%;
+                
+                li {
+                    flex: 1 50%; position: relative;
+                    .banner {
+                        dl {
+                            padding:8rem 3rem;
+                        }
+                        .left {
+                            background-image: url(../../../assets/images/subpages/mrc_srv_03_img09.png);background-position: center center;
+                            dt {
+                                margin-bottom: 3rem;
+                            }
+                            dd.desc {
+                                color: $white;
+                                font-size: 2rem;
+                                line-height: 140%;
+
+                            }
+
+                        }
+                        .right {
+                            background-image: url(../../../assets/images/subpages/mrc_srv_03_img10.png);
+                        }
+                        .btn-wrap{
+                            position: absolute;
+                            bottom:6rem; left:6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //ERP구축
+    &-04 {
+        .ch1 {
+            .flexLayout_01 {
+                li {
+                    .cont-box-tit{
+                        text-align: center;
+                    }
+                    &:last-child {
+                        margin-top: 0;
+                    }
+                }
+                dl {
+                    dd {
+                        &::before {
+                            content: none;
+                        }
+                    }
+                }
+            }
+        }
+        .ch2 {
+            .flexLayout_02 {
+                dl {
+                    dd{ 
+                        ul {
+                            li {
+                                &::before {
+                                    content: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ch3 {
+            .flexLayout_06 {
+                li {
+                    &:nth-of-type(1) {
+                        dl {
+                            dd {
+                                &:nth-of-type(1) {
+                                    margin-bottom: 0rem;
+                                }
+                                &.desc {
+                                    font-size: 1.8rem;
+                                    font-weight: 500;
+                                    line-height: 170%;
+                                    margin-top: 1.4rem;
+                                    margin-bottom: 4rem;
+                                }
+                            }
+                        }
+                    }
+                    dl {
+                        dd {
+                            ul {
+                                li {
+                                    span{
+                                        font-size: 1.4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ch4 {
+            .flexLayout_03 {
+                flex-wrap: wrap;
+                li {
+                    flex: 1 1 40%; position: relative;
+                    dd{
+                        padding-bottom:11rem;
+                    }
+                    img {
+                        position: absolute;
+                        bottom:3rem; right:3rem;
+                        display: block;
+                        width:9rem;
+                    }
+                }
+            }
+        }
+        .banner {
+            dl {
+                background: url("../../../assets/images/subpages/mrc_srv_06_img17.png");
+            }
+        }
+    }
+    .features-sb{
+        position: relative;
+        .slick-card-slider{
+            .wrap{
+                display: flex;
+                justify-content: center;align-items: center; gap:2rem;
+            }
+            .img{
+                width:60.5rem; height: 46rem;
+                img{
+                    width:100%;height: 100%; object-fit: contain; height: 100%;
+                }
+            }
+            .desc{
+                width: calc(100% - 80rem);
+                dl{
+                    dt{
+                       font-weight: 600; font-size: 2.6rem; 
+                    }
+                    dd{
+                       font-size: 1.8rem; font-weight: 400; margin-top: 4rem;  line-height: 1.4;
+                    }
+                }
+            }
+        }
+    }
+    //설비 자동화
+    &-05 {
+        &-cont {
+            article {
+                &.ch1 {
+                    .cont-box {
+                        width: 100%;
+                        height: 100%;
+                        .cont-box-obj {
+                            box-sizing: border-box;
+                            position: relative;
+                            .img-box {
+                                img {
+                                    display: block;
+                                    width: 100%;
+                                }
+                            }
+                            &:nth-of-type(2) {
+                                margin-top: 8rem;
+                                p {
+                                    font-size: 2.6rem;
+                                    line-height: 140%;
+                                    margin-bottom: 4rem;
+                                    span {
+                                        font-weight: 600;
+                                    }
+                                }
+                                .txt-box {
+                                    ul {
+                                        top:52%;
+                                        li {
+                                            &:first-child{
+                                                margin-bottom: 0rem;   
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .txt-box{
+                                display: none;
+                            }
+                        }
+
+                    }
+                }
+                &.ch2 {
+                   ul.flexLayout_02 {
+                    li {
+                        dd{
+                            padding:3rem;
+                        }
+                        &:last-child {
+                            p {
+                                position: absolute;
+                                margin-top: 0.8rem;
+                                font-size: 1.4rem;
+                                color: #70747D;
+                            }
+                        }
+                    }
+                   }
+                   .banner-poster-list{
+                        margin-top: 20rem;
+                   }
+                }
+                &.ch3 {
+                    .flexLayout_06 {
+                        li {
+                            dl {
+                                dd {
+                                    ul {
+                                        li.diagram {
+                                            img{
+                                                width:100%;
+                                            }
+                                            &::before {
+                                                content: none;
+                                            }
+                                            p {
+                                                font-size: 1.6rem;
+                                                font-weight: 600;
+                                                line-height: 170%;
+                                                margin-bottom: 0.8rem;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.ch4 {
+                    .flexLayout_09 {
+                        p {
+                            span {
+                                color: $blue01;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    &-06 {
+        &-cont {
+            .ch1 {
+                .flexLayout_01 {
+                    gap:0 2rem;
+                    li {
+                        &:last-child{
+                            margin-top: 6rem;
+                        }
+                        position: relative;
+                        .cont-box-tit{
+                            text-align: center;
+                        }
+                        dd {
+                            &::before {
+                                display: none;
+                            }
+                        }
+                        .notice{
+                            position: absolute; bottom:-3.8rem; left:0;
+                            color:#70747D; font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+            .ch2 {
+                .cont-box {
+                    .box-tab {
+                        .tab-ctrl-radius {
+                            ul {
+                                li {
+                                    a  {
+                                        color:$gray07;
+                                        border: 0.1rem solid $gray02;
+                                        border-radius: 5rem;
+                                        box-sizing: border-box;
+                                    }
+                                    &.on {
+                                        a {color: white;}
+                                    }
+                                }
+                            }
+                        }  
+                        .tab-contents-wrap {
+                            margin-top: 6rem;
+                            .innerWrap {
+                                p {
+                                    font-size: 1.8rem;
+                                    line-height: 160%;
+                                }
+                                .innerConts {
+                                    margin-top: 4rem;
+                                    table {
+                                        display: table;
+                                        width: 100%;
+                                        border-radius: 1rem;
+                                        overflow: hidden;
+                                        table-layout: fixed;
+                                        tr{
+                                            td{
+                                                border-left:0.1rem solid #fff;
+                                                &:first-child{
+                                                    border-left:none;
+                                                }
+                                            }
+                                        }
+                                        thead{
+                                            .tit {
+                                                background-color: $gray06;
+                                                color:$white;
+                                                text-align: center;
+                                                font-size:2.6rem; 
+                                                td {
+                                                    padding:2rem 2.6rem;
+                                                }
+                                                & + .tit{
+                                                    td{
+                                                        border-top:0.1rem solid #fff !important;
+                                                    }
+                                                    
+                                                }
+                                            }
+                                        }
+                                        tbody {
+                                            tr {
+                                                text-align: center;
+                                                &.img {
+                                                    
+                                                    td {
+                                                        overflow: hidden;
+                                                        height:20rem;
+                                                        img{
+                                                            display: block;
+                                                            width: 100%;
+                                                            height:100%;
+                                                            object-fit: cover;
+                                                        }
+                                                    }
+        
+                                                }
+
+                                            }
+                                        }
+                                        tfoot{
+                                            .desc {
+                                                background-color: $gray01;
+                                                td {
+                                                    padding:3rem;
+                                                    text-align: initial;
+                                                    border-bottom: none;
+                                                    height:19.2rem;
+                                                    p {
+                                                        font-size: 1.8rem;
+                                                        line-height: 1.4;
+                                                        margin-bottom: 0.8rem; 
+                                                        position: relative;
+                                                        -webkit-user-select:text;
+                                                        -moz-user-select:text;
+                                                        -ms-user-select:text;
+                                                        user-select:text;
+                                                        &::before {
+                                                            content: '';
+                                                            display: inline-block;
+                                                            width: 0.2rem;
+                                                            height: 0.2rem;
+                                                            position: absolute;
+                                                            left:-0.8rem;
+                                                            top: 1.3rem;
+                                                            background-color: $gray06;
+                                                            border-radius: 50%;
+                                                            vertical-align: middle;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .notice{
+                                        font-size:1.4rem; font-weight: 400; margin-top: 1.4rem; color:#70747D;
+                                    }
+                                    &.diagram {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        gap:0 6rem;
+
+                                    }
+                                    &.tableSwiper {
+                                        .table_top {
+                                            margin-bottom: 4rem;
+                                            display: flex;
+                                            
+                                            align-items:first baseline;
+                                            p { 
+                                                width: 90%;
+                                            }
+                                            .table_btn_wrap {
+                                                width: 10%;
+                                                display: flex;
+                                                justify-content: end;
+                                                flex-direction: row-reverse;
+                                                column-gap: 1.9rem;
+                                                .table_button_next {
+                                                    position: initial;
+                                                    width: 3.8rem;
+                                                    height: 3.8rem;
+                                                    background:url(../../../assets/images/subpages/mrc_srv_06_arrow_next.svg);
+                                                    &::after{
+                                                        display: none;
+                                                    }
+                                                }
+                                                .table_button_prev {
+                                                    position: initial;
+                                                    width: 3.8rem;
+                                                    height: 3.8rem;
+                                                    background:url(../../../assets/images/subpages/mrc_srv_06_arrow_prev.svg);
+                                                    &::after{
+                                                        display: none;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .table_bottom {
+                                            position: relative;
+                                            width: 100%;
+                                            height: 2.5rem;
+                                            margin: 0 auto;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            flex-direction: row-reverse;
+                                            gap:1.5rem;
+                                            margin-top: 4rem;
+                                            .swiper-pagination {
+                                                background-color: $black;
+                                                position: initial;
+                                                width: initial;
+                                                background-color: transparent;
+                                                
+                                                .swiper-pagination-bullet {
+                                                    
+                                                    text-align: center;
+                                                    width: 0.6rem;
+                                                    height: 0.6rem;
+                                                    
+                                                    &-active {
+                                                        width: 1.4rem;
+                                                        border-radius: 50rem;
+                                                        background-color: $black;
+                                                    }
+                                                }
+                                            }
+                                            .table_button_next_bottom {
+                                                &::after {
+                                                    content: none;
+                                                }
+                                                position: inherit;
+                                                width: 1.6rem;
+                                                height: 1.6rem;
+                                                background: url(../../../assets/images/subpages/mrc_srv_06_arrow_next_bottom.svg);
+                                            }
+                                            .table_button_prev_bottom {
+                                                position: inherit;
+                                                &::after {
+                                                    content: none;
+                                                }
+                                                width: 1.6rem;
+                                                height: 1.6rem;
+                                                background: url(../../../assets/images/subpages/mrc_srv_06_arrow_prev_bottom.svg);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+                
+            }
+            .ch3 {
+                .cont-box {
+                    .flexLayout_02 {
+                        li {
+                            dl {
+                                ul {
+                                    li {
+                                        &::before {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .ch4 {
+                .cont-box {
+                    .videoWrap { 
+                        background: url(../../../assets/images/subpages/mrc_srv_06_videoImg01.png);
+                    }
+                }
+            }
+            .ch5{
+                .notice{
+                    margin-top: 4rem;
+                }
+            }
+            .banner {
+                dl {
+                    background: url("../../../assets/images/subpages/mrc_srv_06_img17.png");
+                }
+            }
+        }
+    }
+    
+    &-07 {
+        &-cont {
+            article {
+                &.ch1 {
+                    .flexLayout_01 {
+                        li:last-child {
+                            margin-top:0rem;
+                        }
+                        li {
+                            .cont-box-tit {
+                                text-align: center;
+                            }
+                            dl {
+                                dd {
+                                    &::before {
+                                        content: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.ch2 {
+                    .cont-box {
+                        ul {
+                            display: flex;
+                            column-gap: 2rem;
+                            width: 100%;
+                            li {
+                                border-radius: 1rem;
+                                overflow: hidden;
+                                width: 33.3333%;
+                                p {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    height: 14.2rem;
+                                    padding:4rem;
+                                    background-color: $gray01;
+                                    text-align: center;
+                                    font-size: 1.8rem;
+                                    line-height: 170%;
+                                    box-sizing: border-box;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.ch4 {
+                    .flexLayout_03 {
+                        flex-wrap: wrap;
+                        li {
+                            flex: 1 1 40%; position: relative;
+                            dl {
+                                padding-bottom: 11rem;
+                                dt {
+                                    margin-bottom: 2rem;
+                                }
+                                dd { 
+                                    &::before {
+                                        content:none;
+                                    }
+                                }
+                            }
+                            img {
+                                display: block;
+                                position: absolute;
+                                bottom:3rem; right:3rem;
+                            }
+                        }
+                    }
+                }
+                &.ch5{
+                    margin-bottom: 7rem !important;
+                }
+            }
+        }
+    }
+
+    &-08 {
+        &-cont {
+            article {
+                &.ch1{
+                    .cont-box{
+                        img{
+                            max-width:100%;
+                        }
+                    }
+                }
+                &.ch2 {
+                    .flexLayout_01 {
+                        li:last-child {
+                            margin-top:0rem;
+                        }
+                        li {
+                            .cont-box-tit {
+                                text-align: center;
+                            }
+                            dl {
+                                dd {
+                                    &::before {
+                                        content: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.ch3 {
+                    .flexLayout_06 {
+                        li {
+                            dl {
+                                dd {
+                                    li {
+                                       span {
+                                            display: block;
+                                            color: $gray07;
+                                            font-size: 1.4rem;
+                                       }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.ch4 {
+                    .flexLayout_03 {
+                        flex-wrap: wrap; gap: 6.8rem 2rem;
+                        li {
+                            flex: 1 1 40%; position:relative;
+                            dl {
+                                padding-bottom: 11rem;
+                                dt {
+                                    margin-bottom: 2rem;
+                                }
+                            }
+                            img {
+                                display: block;
+                                margin-left: auto;
+                                position: absolute; bottom:3rem; right:3rem;
+                            }
+                            .notice{
+                                position: absolute; bottom:-2.8rem; left:0;
+                            }
+                        }
+                    }
+                }
+                &.ch5 {
+                    .top {
+                        ul {
+                            display: flex;
+                            gap:4rem 8rem;
+                            flex-wrap: wrap;
+                            position: relative;
+                            li {
+                                flex: 1 1 40%;
+                                background-color: $white;
+                                border-radius: 1rem;
+                                padding: 4rem 3rem;
+                                border:0.1rem solid #C9CDD6;
+                                dl {
+                                     dt {
+                                        font-size:2.6rem;
+                                        font-weight: 600;
+                                        line-height: 140%;
+                                        text-align: center;
+                                        margin-bottom: 2rem;
+                                     }
+                                     dd {
+                                        font-size: 1.8rem;
+                                        line-height: 1.4;
+                                        text-align: center;
+                                        position: relative;
+                                        color:$gray06;
+                                       
+                                     }
+                                }
+                                &.circle { 
+                                    position: absolute;
+                                    top:50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    border:none;
+                                    background: none;
+                                    border-radius: none;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .banner {
+                dl {
+                    background: url(../../../assets/images/subpages/mrc_srv_08_img09.png);
+                }
+            }
+        }
+    }
+
+    //솔루션 - Nexplant MESplus
+    &-09 {
+        .right {
+            .top-desc {
+                text-align: center;
+                margin-bottom: 20rem;
+                > h6{ 
+                    font-size: 3.4rem;
+                    line-height: 140%;
+                    font-weight: 600;
+                    margin-bottom: 2rem;
+                }
+                > p {
+                    font-size: 2.6rem;
+                    line-height: 140%;
+                    color: $gray06;
+                }
+            }
+        }
+        .ch1 {
+           .box-tab {
+            .tab-btn-wrap {
+                width: 100%;
+                flex-wrap: initial;
+                gap: 0;
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+                overflow: hidden;
+                li {
+                    width: 50%;
+                    flex-shrink: initial;
+                    background-color: $gray01;
+                    padding: 2rem 2.6rem;
+                    a {
+                        color: $gray04;
+                        font-weight: 600;
+                    }
+                    &.on {
+                        background-color: $black;
+                        a { 
+                            color: $white;
+                            &::after {
+                                content: none;   
+                            }
+                        }
+                    }
+                }
+            }
+            > .tab-contents-wrap {
+                .innerWrap {
+                    ul {
+                        display: flex;
+                        border: 0.1rem solid $black;
+                        li {
+                            padding: 4rem;
+                            width: 50%;
+                            &:nth-of-type(2) {
+                                border-left: 0.1rem solid #E5EBF4;
+                            }
+                            dl {
+                                dt {
+                                    display: inline-block;
+                                    margin-bottom: 3rem;
+                                    padding: 0.8rem 1.4rem;
+                                    border-radius: 1rem;
+                                    font-size: 1.6rem;
+                                    &.trouble {
+                                        color: #D40745;
+                                        background-color: #FFE5ED;
+                                    }
+                                    &.solution {
+                                        color: $blue01;
+                                        background-color: $gray02;
+                                    }
+                                }
+                                dd {
+                                    font-size: 1.8rem;
+                                    color: $gray06;
+                                    line-height: 170%;
+                                    margin-bottom: 1rem;
+                                    position: relative;
+                                    padding-left: 0.8rem;
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                    &::before {
+                                        content: '';
+                                        display:block;
+                                        position: absolute;
+                                        left: 0;
+                                        top:1.2rem;
+                                        width: 0.2rem;
+                                        height: 0.2rem;
+                                        background-color: $gray06;
+                                        border-radius: 50%;
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+           }
+        }
+        .ch2 {
+            .tit-box {
+                p {
+                    span {
+                        display: block;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .cont-box {
+                > .chart-img-box {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 4rem;
+                    div {
+                        &.txt {
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 2rem;
+                                li {
+                                    padding: 3rem;
+                                    border-radius: 1rem;
+                                    background-color: $gray01; 
+                                    text-align: center;  
+                                    span {
+                                        display: block;
+                                        margin-bottom: 1rem;
+                                        font-size: 2.2rem;
+                                        font-weight: 600;
+                                        line-height: 140%;
+                                    }
+                                    p {
+                                        font-size: 1.6rem;
+                                        font-weight: 400;
+                                        line-height: 140%;
+                                    }
+                                }                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ch3 {
+            .tit-box {
+                p {
+                    span{
+                        display: block;
+                    }
+                }
+            }
+            .cont-box {
+                .diagram-wrap {
+                    .img-box {
+                        img{ 
+                            width: 100%;
+                        }
+                    }
+                    > p {
+                        font-size: 2.6rem;
+                        font-weight: 600;
+                        line-height: 140%;
+                        margin-top: 4rem;
+                        text-align: center;
+                    }
+                    ul.flexLayout_01 {
+                        flex-wrap: nowrap; 
+                        margin-top: 8rem;
+                        li {
+                            h6 {text-align: center;}
+                            dl {
+                                dd {
+                                    margin-top: 4rem;
+                                    text-align: center;
+                                    &::before {
+                                        content: none;
+                                    }
+                                    span {
+                                        display: block;
+                                        font-size: 1.4rem;
+                                        color: $gray04;
+                                    }
+                                }
+                            }
+                            &:last-child {
+                                margin-top: 0rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ch4 {
+            .cont-box {
+                > .diagram-table-wrap {
+                    table {
+                        width: 100%;
+                        border: 1px solid $gray03;
+                        border-radius: 1rem;
+                        text-align: center;
+                        overflow: hidden;
+                        .borderbottomNone {
+                            border-bottom: none !important;
+                        }
+                        th {
+                            font-size: 2rem;
+                            font-weight: 700;
+                            padding: 0 1.6rem;
+                            width: 21rem;
+                            text-align: center;
+                            vertical-align: middle;
+                            border-bottom: 1px solid $gray03;
+                            border-right: 1px solid $gray03;
+                        }
+                        .row-tit {
+                            font-size: 2rem;
+                            font-weight: 700;
+                            padding: 0 1.6rem;
+                            width: 21rem;
+                            text-align: center;
+                            vertical-align: middle;
+                            border-bottom: 1px solid $gray03;
+                            border-right: 1px solid $gray03;
+                        }
+                        td {
+                            border-right: 1px solid $gray03;
+                            border-bottom: 1px solid $gray03;
+                        }
+                        th.tb-tit {
+                            font-size: 2rem;
+                            font-weight: 600;
+                        }
+                        tr {
+                            border-bottom: 1px solid $gray01;
+                            &:nth-of-type(1) {
+                                td {
+                                    padding: 3rem;  vertical-align: middle;
+                                    img {
+                                        display: block;
+                                        margin: 0 auto;
+                                    }
+                                    &:last-child {
+                                        border-right: none;
+                                    }
+                                }
+                            }
+                            &:nth-of-type(2) {
+                                .tb-tit {
+                                    background-color: $gray06;
+                                    color: $white;
+                                    padding:2rem 1.6rem;
+                                    &:last-child {
+                                        border-right: none;
+                                    }
+                                }
+
+                            }
+                            &:nth-of-type(3) {
+                                td {
+                                    padding: 3rem 0;
+                                    img {
+                                        display: block;
+                                        margin: 0 auto 1rem auto;
+                                    }
+                                    p {
+                                       font-size: 2rem;
+                                       font-weight: 600;
+                                       span {
+                                        color: $blue01;
+                                       } 
+                                    }
+                                    &:last-child {
+                                        border-right: none;
+                                    }
+                                    div.btn-wrap {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        text-align: center;
+                                        margin-top: 12px;
+                                        .btn {
+                                            
+                                            &.default{
+                                                &.ty03{
+                                                    font-size: 1.4rem;
+                                                    font-weight: 600;
+                                                    &::after{ 
+                                                        width: 2.4rem;
+                                                        height: 2.4rem;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-of-type(4) {
+                                th.tb-tit-2 {
+                                    background-color: $gray01;
+                                    padding: 2rem 1.6rem;
+                                    &:last-child {
+                                        border-right: none;
+                                    } 
+                                }
+                                td {
+                                    background-color: $gray01;
+                                    padding: 2rem 1.6rem;
+                                    border-bottom:0;
+                                    &:last-child {
+                                        border-right: none;
+                                    }
+                                    &:first-child{
+                                        background: #fff;
+                                    }
+                                }
+                            }
+                            &:nth-of-type(5) {
+                                td {
+                                    padding: 2rem 1.6rem;
+                                    font-size: 1.8rem;
+                                    font-weight: 600;
+                                    &:last-child {
+                                        border-right: none;
+                                    }
+                                }
+                            }
+                            &:nth-of-type(6) {
+                                td {
+                                    padding: 2rem 3rem; border-bottom:0;
+                                    > ul {
+                                        li{ 
+                                            text-align: initial;
+                                            font-size: 1.8rem;
+                                            line-height: 170%;
+                                            font-weight: 400;
+                                            color:$gray06;
+                                            margin-bottom: 1.6rem;
+                                            &::before {
+                                                content: '';
+                                                display: inline-block;
+                                                width: 0.2rem;
+                                                height: 2px;
+                                                border-radius: 100%;
+                                                background-color: $gray04;
+                                                vertical-align: middle;
+                                                margin-right: 0.8rem;
+                                            }
+                                        }
+                                    }
+                                    &:last-child {
+                                        border-right: none;
+                                    }
+                                }
+                            } 
+                         }
+                    }
+                    
+                    > .btn-wrap {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 4rem;
+                    }
+
+                    
+                }
+            }
+        }
+        .ch5 {
+            .innerConts {
+                overflow: hidden;
+                &.tableSwiper {
+                    > .swiper-wrapper {
+                        .swiperContents {
+                            ul {
+                                display: flex;
+                                gap:0 2rem;
+                                align-items: center;
+                                justify-content: center;
+                                li{ 
+                                    width: 100%;
+                                    max-width: 584px;
+                                    &.img {
+                                        img {
+                                            width: 100%;
+                                            display: block;
+                                        }
+                                        
+                                    }
+                                    dl {
+                                        padding: 3rem;
+                                        dt {
+                                            font-size: 2.6rem;
+                                            line-height: 140%;
+                                            font-weight: 600;
+                                            text-transform: uppercase;
+                                            margin-bottom: 4rem;
+                                        }
+                                        dd {
+                                            font-size: 1.8rem;
+                                            line-height: 170%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+            }
+            .card-slider-container {
+                display: block !important;
+            }
+        }
+        .ch6 {
+            .videoWrap {
+                background: url("../../../assets/images/subpages/mrc_sol_01_videoImg.png");
+            }
+        }
+        .ch7 {
+            .tit-box {
+                p  {
+                    font-size: 2.6rem;
+                    font-weight: 600;
+                    line-height: 140%;
+                }
+            }
+            ul.hashtag {
+                display: flex;
+                column-gap: 1.4rem;
+                margin-top: 2rem;
+                > li {
+                    width: initial;
+                    font-size: 1.6rem;
+                    color: #70747D;
+                    margin-left: initial;
+                }
+            }
+        }
+
+    }
+    //QMS
+    &-10 {
+        .ch3 {
+            .tit-box {
+                .logo{
+                    margin-top: 3rem;
+                }
+                .desc{
+                    font-size: 2.6rem; line-height: 1.7; color:#484C51; margin-top: 1rem;
+                }
+            }
+            ul.flexLayout_03 {
+                flex-wrap: wrap;
+               &> li {
+                    flex: 1 1 30%; position: relative; 
+                    dl {
+                        padding-bottom: 11rem;
+                        dt {
+                            margin-bottom: 2rem;
+                        }
+                        dd { 
+                            &::before {
+                                content:none;
+                            }
+                        }
+                    }
+                    img {
+                        display: block;
+                        margin-left: auto; 
+                        position: absolute; bottom:3rem; right:3rem;
+                    }
+                }
+                .card-slider-list{
+                    position: relative;
+                    dl{
+                        padding-bottom: 11rem;
+                    }
+                    img{
+                        position: absolute; bottom:3rem; right:3rem;
+                    }   
+                }
+                .slick-dots{
+                    li{
+                        padding: 0;
+                    }
+                }
+            }
+            .flexLayout_12 {
+                margin-top: 4rem;
+                li{
+                    width: calc(33.3333% - 1.2rem);
+                    flex: initial;
+                    dl{
+                        dd{
+                            min-height: 6rem; display: flex; align-items: center; justify-content: center;
+                        }
+                    }
+                    p {
+                        text-align: center;
+                    }
+                }
+                &.slick-card-slider{
+                    .card-slider-list{
+                        width:100%; background:#E5EBF4; padding:3rem 2rem; border-radius: 1rem; text-align: center; min-height:21.4rem;
+                        dl{
+                            margin-bottom:3rem;
+                            dt{
+                                font-size: 2rem; font-weight: 600; 
+                            }
+                            dd{
+                                font-size: 1.6rem; font-weight: 600; margin-top: 1rem;
+                            }
+                        }
+                        p{
+                            font-size: 1.6rem; font-weight: 400;
+                        }
+                    }
+                }
+            }
+            h6.mid-tit {
+                margin-top:8rem;
+                font-size: 2.6rem;
+                font-weight: 600;
+                line-height: 140%;
+
+            }
+        }
+        .ch4 {
+            .cont-box {
+                .videoWrap {
+                    background-image: url(../../assets/images/subpages/mrc_sol_02_videoImg.png);
+                    .videoDesc{
+                        padding:3rem 2rem; width: 95%;
+                        h6{
+                            font-size: 2rem;
+                        }
+                        p{
+                            margin-top: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+        .ch5 {
+            .flexLayout_06 {
+                li {
+                    img {
+                        border: 0.4rem solid $black;
+                    }
+                }
+            }     
+        }
+        .ch6 {
+            .flexLayout_04 {
+                li {
+                    div {
+                        ul.hashtag {
+                            display: flex;
+                            column-gap: 1.4rem;
+                            margin-top: 2rem;
+                            > li {
+                                width: initial;
+                                font-size: 1.6rem;
+                                color: #70747D;
+                                margin-left: initial;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ch7 {
+            ul {
+                display: flex;
+                column-gap: 2rem;
+                width: 100%;
+                
+                li {
+                    flex: 1 50%;
+                    .banner {
+                        dl {
+                            padding:8rem 6rem;
+                        }
+                        .left {
+                            background-image: url(../../../assets/images/subpages/mrc_sol_02_img12.png);
+                            background-size: 100%;
+                            .btn-wrap {
+                                .btn {
+                                    &.icon {
+                                        color: $white;
+                                        &::after { 
+                                            height: 2.5rem;
+                                            background: url(../../../assets/images/icon/ico-download-white.svg) no-repeat;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .right {
+                            background-image: url(../../../assets/images/subpages/mrc_srv_03_img10.png);
+                            background-size: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //MC
+    &-11 {
+        .ch2{
+            .flexLayout_11{
+                gap:2rem;
+            }
+        }
+        .ch3 {
+            .tit-box {
+                .logo{
+                    margin-top: 3rem;
+                }
+                .desc{
+                    font-size: 2.6rem; line-height: 1.7; color:#484C51; margin-top: 1rem;
+                }
+            }
+            ul.flexLayout_03 {
+                &.slick-card-slider{
+                    .slick-dots{
+                        li{
+                            padding:0;
+                        }
+                    }
+                }
+                flex-wrap: wrap;
+                & > li {
+                    flex: 1 1 40%;
+                    dl {
+                        dt {
+                            margin-bottom: 2rem;
+                        }
+                        dd { 
+                            &::before {
+                                content:none;
+                            }
+                        }
+                    }
+                    img {
+                        display: block;
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+        .ch4 {
+            .cont-box {
+                .videoWrap {
+                    background-image: url(../../assets/images/subpages/mrc_sol_03_videoImg.png); background-position: center;
+                    .videoDesc{
+                        padding:3rem 2rem; width:95%;
+                        h6{
+                            font-size: 2rem;
+                        }
+                        p{
+                            margin-top:3rem; font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+        .ch5 {
+            .flexLayout_06 {
+                li {
+                    dl {
+                        dd {
+                            ul {
+                                li {
+                                    span {
+                                        display: block;
+                                        font-size: 1.4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }     
+        }
+        .ch6 {
+            .flexLayout_03{
+                flex-wrap: wrap;
+                li {
+                    flex: 1 1 40%;
+                    img {
+                        display: block;
+                        margin-left: auto;
+                    } 
+                    dt {
+                        margin-bottom: 2rem;
+                    }
+                    dd {
+                        &::before {
+                            content: none;
+                        }
+                    }
+                    
+                    dl.dot {
+                        dd {
+                            &::before {
+                                content: '';
+                                width: 0.2rem;
+                                height: 0.2rem;
+                                color: $gray05;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ch8 {
+            ul {
+                display: flex;
+                column-gap: 2rem;
+                width: 100%;
+                
+                li {
+                    flex: 1 50%;
+                    .banner {
+                        dl {
+                            padding:8rem 6rem;
+                        }
+                        .left {
+                            background-image: url(../../../assets/images/subpages/mrc_sol_03_img12.png);
+                            background-size: 100%;
+                            .btn-wrap {
+                                .btn {
+                                    &.icon {
+                                        color: $white;
+                                        &::after { 
+                                            height: 2.5rem;
+                                            background: url(../../../assets/images/icon/ico-download-white.svg) no-repeat;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .right {
+                            background-image: url(../../../assets/images/subpages/mrc_srv_03_img10.png);
+                            background-size: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //MCS {
+    &-12 {
+        
+        .order-list-wrap{
+            width:35.1rem;
+        }
+        .tit-box{
+            .notice{
+                margin-top: 2rem;
+            }
+        }
+        .ch1{
+            .cont-box{
+                .desc-cont{
+                    &.flex-sb{
+                        gap:8rem !important;
+                        .img{
+                            img{
+                                width:100%; height:100%; object-fit: contain;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ch2{
+            .flex-sb{
+                .img{
+                    width:36.4rem;
+                }
+            }
+        }
+        .ch3{
+            .flex-sb{
+                .img{
+                    width:36.4rem;
+                }
+            }
+        }
+        .cont-box {
+            .desc-tit {
+                margin-top: 8rem;
+                dt {
+                    font-size: 2.6rem; 
+                    font-weight: 600;
+                    line-height: 140%;
+                }
+                dd {
+                    margin-top: 2rem;
+                    font-size: 1.8rem;
+                    line-height: 140%;
+                }
+            }
+            .desc-cont {
+                margin-top: 8rem;
+                img{
+                    max-width:100%;
+                }
+            }
+        } 
+        .banner {
+            dl {
+                background: url(../../../assets/images/subpages/mrc_srv_06_img17.png)
+            }
+        }
+    }
+
+    //highway101 
+    &-13 {
+        .cont-box-tit{
+            font-size: 2.6rem; font-weight: 600;
+        }
+
+        .ch1{
+            .flexLayout_10 {
+                & >li{
+                    padding:3rem;
+                }
+            }
+            .slick-dots{
+                li{
+                    padding:0;
+                }
+            }
+        }
+        .ch2 {
+            .cont-box {
+                ul {
+                    display: flex;
+                    column-gap: 2rem;
+                    width: 100%;
+                    li {
+                        min-height:32.2rem;
+                        border-radius: 1rem;
+                        overflow: hidden;
+                        flex:1;
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: 20rem;
+                        }
+                        p {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding:3rem;
+                            background-color: $gray01;
+                            text-align: center;
+                            font-size: 1.8rem;
+                            line-height: 1.4;
+                            box-sizing: border-box;
+                            height: calc(100% - 20rem);
+                        }
+                    }
+                }
+            }
+        }
+        .ch3 {
+
+            .tit-box {
+                .logo{
+                    margin-top: 3rem;
+                }
+                .desc{
+                    font-size: 2.6rem; line-height: 1.7; color:#484C51; margin-top: 1rem;
+                }
+            }
+            .top-table {
+                margin-top: 8rem;
+                margin-bottom: 8rem;
+                table {
+                    width: 100%;
+                    display: table;
+                    border-radius: 1rem;
+                    overflow: hidden;
+                    border: 0.1rem solid $gray03;
+                    tbody {
+                        tr {
+                            &.black {
+                                background-color: $black;
+                                
+                                th {
+                                    padding:2rem 1.6rem;
+                                    text-align: center;
+                                    color: $white;
+                                    font-size: 2rem;
+                                    font-weight: 700;
+                                    line-height: 140%;
+                                }
+                            }
+                            &.gray {
+                                background-color: $gray01;
+                                td,th {
+                                    padding: 2rem 1.6rem;
+                                    padding:2rem 1.6rem;
+                                    text-align: center;
+                                    color: $black;
+                                    font-size: 2rem;
+                                    font-weight: 700;
+                                    line-height: 140%;
+                                    border-bottom: 0.1rem solid #C9CDD6;
+                                    border-top: 0.1rem solid #C9CDD6;
+                                    border-left: 0.1rem solid #C9CDD6;
+                                    &:first-child{
+                                        border-left:0;
+                                    }
+                                }
+                            }
+                            &.cont {
+                                td {
+                                    padding: 3rem; border-left:0.1rem solid #C9CDD6; width:50%;
+                                    p.caption {
+                                        color: $gray06;
+                                        text-align: right;
+                                        margin-bottom: 2rem;
+                                        font-size: 1.4rem;
+                                    }
+                                    &:first-child{
+                                        border-left:0;
+                                    }
+                                    ul {
+                                        li {
+                                            font-size: 2rem;
+                                            font-weight: 600;
+                                            line-height: 140%;
+                                            margin-bottom: 2rem;
+                                            position: relative;
+                                            margin-left: 2.8rem;
+                                            //체크아이콘
+                                            &::before {
+                                                content: '';
+                                                display: inline-block;
+                                                width: 2rem;
+                                                height: 2rem;
+                                                background: url(../../../assets/images/subpages/mrc_srv_01_icon_check.svg);
+                                                position: absolute;
+                                                left: -2.8rem;
+                                                top:0.2rem;
+                                            }
+                                            span {
+                                                font-weight: 400;
+                                                display: block;
+                                                margin-top: 1rem;
+                                                font-size: 1.8rem;
+                                                line-height: 170%;
+                                                color: $gray06;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+
+            ul.flexLayout_01 {
+                flex-wrap: nowrap; 
+                & >li {
+                    width:32%;
+                    h6 {text-align: center;}
+                    dl {
+                        dd {
+                            &::before {
+                                content: none;
+                            }
+                            span {
+                                display: block;
+                                font-size: 1.4rem;
+                                color: $gray04;
+                            }
+                        }
+                    }
+                    &:last-child {
+                        margin-top: 0rem;
+                    }
+                }
+                
+            }
+        }
+        .ch4 {
+            .cont-box {
+                .videoWrap {
+                    background-image: url(../../assets/images/subpages/mrc_sol_05_videoImg.png);
+                }
+            }
+        }
+        .ch5 {
+            .flexLayout_06 {
+                li {
+                    dl {
+                        dd {
+                            ul {
+                                li {
+                                    span.notice {
+                                        display: block;
+                                        font-size: 1.4rem;
+                                        margin-top: 0.4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }     
+        }
+        .ch6 {
+            .flexLayout_03{
+                li {
+                    width: 33.333%;
+                    position: relative;
+                    img {
+                        display: block;
+                        position: absolute; bottom:3rem; right:3rem;
+                    } 
+                    dt {
+                        margin-bottom: 2rem;
+                    }
+                    dd {
+                        &::before {
+                            content: none;
+                        }
+                    }
+                    
+                    dl.dot {
+                        padding-bottom: 11rem;
+                        dd {
+                            &::before {
+                                content: '';
+                                width: 0.2rem;
+                                height: 0.2rem;
+                                color: $gray05;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ch7 {
+            .acc-conts {
+                span {
+                    display: block;
+                    margin-top: 2rem;
+                }
+            }
+            ul.hashtag {
+                display: flex;
+                column-gap: 1.4rem;
+                margin-top: 2rem;
+                > li {
+                    width: initial;
+                    font-size: 1.6rem;
+                    color: #70747D;
+                    margin-left: initial;
+                }
+            }
+        }
+        .ch8 {
+            ul {
+                display: flex;
+                column-gap: 2rem;
+                width: 100%;
+                
+                li {
+                    flex: 1 50%;
+                    .banner {
+                        dl {
+                            padding:8rem 6rem;
+                        }
+                        .left {
+                            background-image: url(../../../assets/images/subpages/mrc_sol_05_img12.png);
+                            background-size: 100%;
+                            .btn-wrap {
+                                .btn {
+                                    &.icon {
+                                        color: $white;
+                                        &::after { 
+                                            height: 2.5rem;
+                                            background: url(../../../assets/images/icon/ico-download-white.svg) no-repeat;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .right {
+                            background-image: url(../../../assets/images/subpages/mrc_srv_03_img10.png);
+                            background-size: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    &-15 {
+        .ch1 {
+            .tit-box {
+                p {
+                    line-height: 170%;
+                }
+            }
+        }
+        .ch3 {
+            .banner-poster-list {
+                margin-top: 20rem;
+            }
+        }
+    }
+
+    &-16 {
+        .ch2 {
+            .flexLayout_07 {
+                & > li {
+                    ul { 
+                        li {
+                            line-height: 170%;
+                            sup {
+                                vertical-align: super;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ch3 {
+            .banner-poster-list {
+                margin-top: 20rem;
+            }
+        }
+    }
+
+    &-18 {
+        .ch2 {
+            .bettery_list_wrap {
+                box-sizing: border-box;
+                position: relative;
+                margin-bottom: 8rem;
+                .img-box {
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .ch3 {
+            .banner-poster-list {
+                margin-top: 20rem;
+            }
+        }
+    }
+    &-19 {
+        .ch3 {
+            .banner-poster-list {
+                margin-top: 20rem;
+            }
+        }
+        .ch4 {
+            .cont-box {
+                .logo_tit{
+                    @include semimTxt;
+                    font-weight: 600;
+                    color: $gray04;
+                    margin:0 0 3rem 0;
+                    & + .flexLayout_08 + .logo_tit{
+                        margin: 10rem 0 3rem 0;
+                    }
+                }
+                .flexLayout_08 {
+                    li {
+                        &.logo_li {
+                            grid-column: 1 / 4;
+                        } 
+                    }
+                }
+                
+            }
+        }
+    }
+    &-20 {
+        .ch2 {
+            .cont-box {
+                .flexLayout_07{
+                    ul{
+                        li{
+                            > span {
+                                display: block;
+                                font-size: 1.4rem;
+                                line-height: 170%;
+                                &::before {
+                                    content: '';
+                                    display: inline-block;
+                                    width: 0.2rem;
+                                    height: 0.2rem;
+                                    background-color: $gray06;
+                                    border-radius: 100%;
+                                    vertical-align: middle;
+                                    margin-right: 0.8rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ch3 {
+            .banner-poster-list {
+                margin-top: 20rem;
+            }
+        }
+    }
+
+    //EES
+    &-21 {
+        .ch3 {
+            .tit-box {
+                .logo{
+                    margin-top: 3rem;
+                }
+                .desc{
+                    font-size: 2.6rem; line-height: 1.7; color:#484C51; margin-top: 1rem;
+                }
+            }
+            ul.flexLayout_03 {
+                flex-wrap: wrap;
+               &> li {
+                    flex: 1 1 30%; position: relative; 
+                    dl {
+                        padding-bottom: 11rem;
+                        dt {
+                            margin-bottom: 2rem;
+                        }
+                        dd { 
+                            &::before {
+                                content:none;
+                            }
+                        }
+                    }
+                    img {
+                        display: block;
+                        margin-left: auto; 
+                        position: absolute; bottom:3rem; right:3rem;
+                    }
+                }
+                .card-slider-list{
+                    position: relative;
+                    dl{
+                        padding-bottom: 11rem;
+                    }
+                    img{
+                        position: absolute; bottom:3rem; right:3rem;
+                    }   
+                }
+                .slick-dots{
+                    li{
+                        padding: 0;
+                    }
+                }
+            }
+            .flexLayout_12 {
+                margin-top: 4rem;
+                li{
+                    width: calc(33.3333% - 1.2rem);
+                    flex: initial;
+                    dl{
+                        dd{
+                            min-height: 6rem; display: flex; align-items: center; justify-content: center;
+                        }
+                    }
+                    p {
+                        text-align: center;
+                    }
+                }
+                &.slick-card-slider{
+                    .card-slider-list{
+                        width:100%; background:#E5EBF4; padding:3rem 2rem; border-radius: 1rem; text-align: center; min-height:21.4rem;
+                        dl{
+                            margin-bottom:3rem;
+                            dt{
+                                font-size: 2rem; font-weight: 600; 
+                            }
+                            dd{
+                                font-size: 1.6rem; font-weight: 600; margin-top: 1rem;
+                            }
+                        }
+                        p{
+                            font-size: 1.6rem; font-weight: 400;
+                        }
+                    }
+                }
+            }
+            h6.mid-tit {
+                margin-top:8rem;
+                font-size: 2.6rem;
+                font-weight: 600;
+                line-height: 140%;
+
+            }
+        }
+        .ch4 {
+            .flexLayout_06 {
+                li {
+                    img {
+                        border: 0.4rem solid $black;
+                    }
+                }
+            }  
+        }
+        .ch5 {
+            padding-bottom: 11rem;
+            .flexLayout_04 {
+                li {
+                    div {
+                        ul.hashtag {
+                            display: flex;
+                            column-gap: 1.4rem;
+                            margin-top: 2rem;
+                            > li {
+                                width: initial;
+                                font-size: 1.6rem;
+                                color: #70747D;
+                                margin-left: initial;
+                            }
+                        }
+                    }
+                }
+            }   
+        }
+    }
+}

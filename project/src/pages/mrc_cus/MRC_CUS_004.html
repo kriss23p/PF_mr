@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+@@include('./pages/includes/head.html', {
+    pageTitle : '공지사항 | 고객지원 - 미라콤아이앤씨',
+    ogTitle: '공지사항 | 고객지원 - 미라콤아이앤씨',
+    ogDesc: '미라콤아이앤씨의 업데이트 정보 등 다양한 소식을 알려드립니다.',
+    metaDescription: '미라콤아이앤씨의 업데이트 정보 등 다양한 소식을 알려드립니다.',
+    metaKeywords: 'Miracominc,miracom,미라콤아이앤씨,미라콤,스마트팩토리,smartfactory,공지사항,이벤트,소식,업데이트,공지',
+    ogUrl: 'https://miracom-inc.com',
+    ogImage: '../../assets/images/og/miracom-og.png',
+    ogType: 'article',
+    cssPath : '../../assets/css/common.min.css'
+})
+</head>
+<body class="white">
+<div id="wrap">
+
+    @@include('../src/pages/includes/header.html', {
+        type : 'sub-type',
+        gnb : true,
+        subDepth: true,
+        subArr : ['미라콤아이앤씨', '고객지원', '공지사항​']
+    })
+    <main class="container" id="goto-conts">
+        <div class="sub-conts">
+            <!-- 컨텐츠 시작 -->
+            <section class="customer-04">
+                <p class="depth-tit">고객지원</p>
+                <div class="page-tit">
+                    <h1>공지사항​</h1>
+                </div>
+                <div class="page-desc">
+                    <div class="board">
+                        <div class="search-wrap">
+                            <div class="box-input serach-input">
+                                <div class="input-wrap">
+                                    <input type="text" placeholder="검색어를 입력해 주세요." class="input-default is-delete" title="검색어">
+                                    <button type="button" class="ico-delete"><span class="hidden">삭제</span></button>
+                                    <button class="ico-search" type="button"><span class="hidden">검색</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="total-number">
+                            Total. <span>28</span> [<span>1</span>/<span>3</span>]
+                        </p>
+                        <ul class="board-list">
+                            <li>
+                                <div class="left">
+                                    <p class="type">
+                                        <span class="date">2023.03.15</span>
+                                    </p>
+                                    <a href="#" class="title">
+                                        <strong>[2023 스마트 제조 대전망] 먼저 알면 성과 내는 2023년 스마트 제조 트렌드</strong>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <p class="type">
+                                        <span class="date">2023.03.15</span>
+                                    </p>
+                                    <a href="#" class="title">
+                                        <strong>[2023 스마트 제조 대전망] 먼저 알면 성과 내는 2023년 스마트 제조 트렌드</strong>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <p class="type">
+                                        <span class="date">2023.03.15</span>
+                                    </p>
+                                    <a href="#" class="title">
+                                        <strong>[2023 스마트 제조 대전망] 먼저 알면 성과 내는 2023년 스마트 제조 트렌드</strong>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <p class="type">
+                                        <span class="date">2023.03.15</span>
+                                    </p>
+                                    <a href="#" class="title">
+                                        <strong>[2023 스마트 제조 대전망] 먼저 알면 성과 내는 2023년 스마트 제조 트렌드</strong>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="no-result">
+                            <p class="no-result-txt">
+                                검색 결과 혹은 게시물이 없습니다.
+                            </p>
+                        </div>
+                    </div>
+                 </div>
+                 @@include('./pages/includes/pagination.html')
+            </section>
+            <!-- 컨텐츠 끝 -->
+        </div>
+    </main>
+    @@include('./pages/includes/footer.html')
+    <!-- SCRIPT IMPORT -->
+    @@include('../src/pages/includes/scriptImport.html', {pageMain : false,})
+</div>
+</body>
+</html>

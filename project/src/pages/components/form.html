@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include('../src/pages/includes/guide/head.html', {title: '컴포넌트 가이드 - 미라콤'})
+<body>
+    <div id="wsg-wrap" class="wsg">
+        <header class="wsg-header">
+            <nav id="nav">
+                <ul>
+                    <li class=""><a href="../../index.html">포트폴리오 사이트</a></li>
+                    <li class="on"><a href="../components/wsg.html">컴포넌트</a></li>
+                </ul>
+            </nav>
+        </header>
+        <ul class="guideSubmenu">
+            <li><a href="./wsg.html">폰트/컬러</a></li>
+            <li><a href="./button.html">버튼</a></li>
+            <li><a href="./form.html" class="guideOn">form</a></li>
+            <li><a href="./tab.html">탭</a></li>
+        </ul>
+        <div class="guideContainer">
+            <section class="sample">
+                <h2 class="sampleTitle">01. Input</h2>
+
+                <div class="sampleContent">
+                    <h3><strong>기본</strong></h3>
+                    <!-- 기본 인풋 , delete 버튼이 있어야 할 경우 input에 is-delete 클래스 추가-->
+                    <!-- 에러 시 .box-input 에 error 클래스 추가 -->
+                    <div class="box-input">
+                        <div class="input-wrap">
+                            <label for="input1" class="input-label label-trans">아이디<span class="ico-required">(필수)</span></label>
+                            <input id="input1" type="text" class="input-default is-delete">
+                            <button type="button" class="ico-delete"><span class="hidden">삭제</span></button>
+                        </div>
+                        <span class="txt-error">아이디를 입력해 주세요.</span>
+                    </div>
+                </div>
+
+                <div class="sampleContent">
+                    <h3><strong>label 없는 input</strong></h3>
+                    <!-- 기본 인풋 , delete 버튼이 있어야 할 경우 input에 is-delete 클래스 추가-->
+                    <!-- 에러 시 .box-input 에 error 클래스 추가 -->
+                    <div class="box-input">
+                        <div class="input-wrap">
+                            <input type="text" placeholder="아이디를 입력하세요." class="input-default is-delete" title="아이디">
+                            <button type="button" class="ico-delete"><span class="hidden">삭제</span></button>
+                        </div>
+                        <span class="txt-error">아이디를 입력해 주세요.</span>
+                    </div>
+                </div>
+
+                <div class="sampleContent">
+                    <h3><strong>input disabled</strong></h3>
+                    <!-- 기본 인풋 , delete 버튼이 있어야 할 경우 input에 is-delete 클래스 추가-->
+                    <!-- 에러 시 .box-input 에 error 클래스 추가 -->
+                    <div class="box-input">
+                        <div class="input-wrap">
+                            <label for="input1" class="input-label label-trans">아이디<span class="ico-required">(필수)</span></label>
+                            <input type="text" class="input-default is-delete" title="아이디" disabled>
+                            <button type="button" class="ico-delete"><span class="hidden">삭제</span></button>
+                        </div>
+                        <span class="txt-error">아이디를 입력해 주세요.</span>
+                    </div>
+                </div>
+
+                <div class="sampleContent">
+                    <h3><strong>input error</strong></h3>
+                    <!-- 기본 인풋 , delete 버튼이 있어야 할 경우 input에 is-delete 클래스 추가-->
+                    <!-- 에러 시 .box-input 에 error 클래스 추가 -->
+                    <div class="box-input error">
+                        <div class="input-wrap">
+                            <label for="input1" class="input-label label-trans">아이디<span class="ico-required">(필수)</span></label>
+                            <input type="text" class="input-default is-delete" title="아이디">
+                            <button type="button" class="ico-delete"><span class="hidden">삭제</span></button>
+                        </div>
+                        <span class="txt-error">Message</span>
+                    </div>
+                </div>
+
+                <div class="sampleContent">
+                    <h3><strong>input 하단 text</strong></h3>
+                    <!-- 기본 인풋 , delete 버튼이 있어야 할 경우 input에 is-delete 클래스 추가-->
+                    <!-- 에러 시 .box-input 에 error 클래스 추가 -->
+                    <div class="box-input">
+                        <div class="input-wrap">
+                            <label for="input1" class="input-label label-trans">아이디<span class="ico-required">(필수)</span></label>
+                            <input type="text" class="input-default is-delete" title="아이디">
+                            <button type="button" class="ico-delete"><span class="hidden">삭제</span></button>
+                        </div>
+                        <p class="input-bottom-text">Message</p>
+                    </div>
+                </div>
+
+                <div class="sampleContent">
+                    <h3><strong>검색어 input</strong></h3>
+                    <!-- 기본 인풋 , delete 버튼이 있어야 할 경우 input에 is-delete 클래스 추가-->
+                    <!-- 에러 시 .box-input 에 error 클래스 추가 -->
+                    <div class="box-input serach-input">
+                        <div class="input-wrap">
+                            <input type="text" placeholder="검색어를 입력해 주세요." class="input-default is-delete" title="검색어">
+                            <button type="button" class="ico-search">검색</button>
+                            <button type="button" class="ico-delete"><span class="hidden">삭제</span></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sample">
+                <h2 class="sampleTitle">02. select</h2>
+
+                <div class="sampleContent">
+                    <h3><strong>기본 셀렉트 - label 없는것</strong></h3>
+                    <div class="box-select">
+                        <select name="select1" id="select1" class="text-select">
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                                <option value="4">Option 4</option>
+                                <option value="5">Option 5</option>
+                                <option value="6">Option 6</option>
+                                <option value="7">Option 7</option>
+                                <option value="8">Option 8</option>
+                                <option value="9">Option 9</option>
+                                <option value="10">Option 10</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="sampleContent">
+                    <h3><strong>기본 셀렉트</strong></h3>
+                    <div class="box-select">
+                        <label for="select1" class="select-label label-trans">Label<span class="ico-required">(필수)</span></label>
+                        <select name="select1" id="select1" class="select-default">
+                            <option value="1">선택</option>
+                            <option value="2">Option 1</option>
+                            <option value="3">Option 2</option>
+                            <option value="4">Option 3</option>
+                            <option value="5">Option 4</option>
+                            <option value="6">Option 5</option>
+                            <option value="7">Option 6</option>
+                            <option value="8">Option 7</option>
+                            <option value="9">Option 8</option>
+                            <option value="10">Option 9</option>
+                            <option value="11">Option 10</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="sampleContent">
+                    <h3><strong>기본 셀렉트 - disabled</strong></h3>
+                    <div class="box-select">
+                        <select name="select1" id="select1" class="text-select" disabled>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                            <option value="5">Option 5</option>
+                            <option value="6">Option 6</option>
+                            <option value="7">Option 7</option>
+                            <option value="8">Option 8</option>
+                            <option value="9">Option 9</option>
+                            <option value="10">Option 10</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="sampleContent">
+                    <h3><strong>멀티 셀렉트</strong></h3>
+                    <div class="box-select select-multple">
+                        <label for="select1" class="select-label">Label<span class="ico-required">(필수)</span></label>
+                        <select name="select1" id="select1" class="select-default">
+                            <option value="1">선택</option>
+                            <option value="2">Option 1</option>
+                            <option value="3">Option 2</option>
+                            <option value="4">Option 3</option>
+                            <option value="5">Option 4</option>
+                            <option value="6">Option 5</option>
+                            <option value="7">Option 6</option>
+                            <option value="8">Option 7</option>
+                            <option value="9">Option 8</option>
+                            <option value="10">Option 9</option>
+                            <option value="11">Option 10</option>
+                        </select>
+                    </div>
+
+                    <!-- 2depth select일경우 select-more 클래스 추가 -->
+                    <div class="box-select select-more">
+                        <select name="select2" id="select2" class="select-default">
+                            <option value="1">선택</option>
+                            <option value="2">Option 1</option>
+                            <option value="3">Option 2</option>
+                            <option value="4">Option 3</option>
+                            <option value="5">Option 4</option>
+                            <option value="6">Option 5</option>
+                            <option value="7">Option 6</option>
+                            <option value="8">Option 7</option>
+                            <option value="9">Option 8</option>
+                            <option value="10">Option 9</option>
+                            <option value="11">Option 10</option>
+                        </select>
+                        <div class="box-input">
+                            <div class="input-wrap">
+                                <input type="text" placeholder="아이디를 입력하세요." class="input-default is-delete" title="아이디">
+                                <button type="button" class="ico-delete"><span class="hidden">삭제</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sample">
+                <h2 class="sampleTitle">03.textarea</h2>
+
+                <div class="sampleContent">
+                    <h3><strong>기본 텍스트박스</strong></h3>
+                    <!-- error시 textarea-wrap에 error 클래스 추가 -->
+                    <div class="textarea-wrap">
+                        <label for="reason" class="input-label">Label<span class="ico-required">(필수)</span></label>
+                        <div class="box-textarea box-input">
+                            <textarea id="reason" type="textarea" placeholder="상세히 입력해 주세요" class="input-default is-delete"></textarea>
+                            <span class="text-count"><em>0</em> / 2000</span>
+                        </div>
+                        <span class="txt-error">에러</span>
+                    </div>
+                </div>
+
+                <div class="sampleContent">
+                    <h3><strong>기본 텍스트박스 - 에러</strong></h3>
+                    <!-- error시 textarea-wrap에 error 클래스 추가 -->
+                    <div class="textarea-wrap error">
+                        <label for="reason" class="input-label">Label<span class="ico-required">(필수)</span></label>
+                        <div class="box-textarea box-input">
+                            <textarea id="reason" type="textarea" placeholder="상세히 입력해 주세요" class="input-default is-delete"></textarea>
+                            <span class="text-count"><em>0</em> / 2000</span>
+                        </div>
+                        <span class="txt-error">에러</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sample">
+                <h2 class="sampleTitle">04. File Input</h2>
+                <div class="sampleContent">
+                    <h3><strong>기본 파일첨부</strong></h3>
+                    <div class="file-input-wrap">
+                        <div class="box-attach-wrap">
+                            <div class="box-attach">
+                                <input type="file" id="attach1">
+                                <!--입력된 파일명-->
+                                <span class="file-name">Label</span>
+                                <div class="btn-wrap">
+                                    <label for="attach1" class="btn default">파일 업로드</label>
+                                </div>
+                            </div>
+
+                            <!-- 파일이 첨부되었을때 -->
+                            <ul class="box-file-attached"></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sampleContent">
+                    <h3><strong>기본 파일첨부 - 라벨/파일 있을때</strong></h3>
+                    <div class="file-input-wrap">
+                        <em class="input-label">Label<span class="ico-required">(필수)</span></em>
+                        <div class="box-attach-wrap">
+                            <div class="box-attach">
+                                <input type="file" id="attach1">
+                                <!--입력된 파일명-->
+                                <span class="file-name">Label</span>
+                                <div class="btn-wrap">
+                                    <label for="attach1" class="btn default">파일 업로드</label>
+                                </div>
+                            </div>
+
+                            <!-- 파일이 첨부되었을때 -->
+                            <ul class="box-file-attached">
+                                <li class="box-attached">
+                                    <div class="file-txt">
+                                        <span>file.page1</span>
+                                        <button type="button" type="button" class="ico-delete"><span class="hidden">삭제</span></button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sample">
+                <h2 class="sampleTitle">05. checkbox</h2>
+                <div class="sampleContent">
+                    <div class="box-btn">
+                        <h3><strong>선택시 - font-size : 14px</strong></h3><br/>
+                        <div class="btn-check">
+                            <input type="checkbox" id="check2">
+                            <label for="check2"><span class="ico-check"></span>Checked</label>
+                        </div>
+                         <div class="btn-check">
+                            <input type="checkbox" id="check3">
+                            <label for="check3"><span class="ico-check"></span>Checked</label>
+                        </div>
+                        <br/><br/><h3><strong>선택불가 - font-size : 14px</strong></h3><br/>
+                        <div class="btn-check">
+                            <input type="checkbox" id="check4" disabled>
+                            <label for="check4"><span class="ico-check"></span>Disabled</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sampleContent">
+                    <div class="box-btn">
+                        <h3><strong>선택시 - font-size : 18px</strong></h3><br/>
+                        <div class="btn-check big-box">
+                            <input type="checkbox" id="check5">
+                            <label for="check5"><span class="ico-check"></span>Checked</label>
+                        </div>
+                         <div class="btn-check big-box">
+                            <input type="checkbox" id="check6">
+                            <label for="check6"><span class="ico-check"></span>Checked</label>
+                        </div>
+                        <br/><br/><h3><strong>선택불가 - font-size : 18px</strong></h3><br/>
+                        <div class="btn-check big-box">
+                            <input type="checkbox" id="check7" disabled>
+                            <label for="check7"><span class="ico-check"></span>Disabled</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sampleContent">
+                    <div class="box-btn">
+                        <h3><strong>선택시 - 필터</strong></h3><br/>
+                        <div class="btn-check box-check">
+                            <input type="checkbox" id="check8">
+                            <label for="check8"><span class="ico-check"></span>Checked 01</label>
+                        </div>
+                         <div class="btn-check box-check">
+                            <input type="checkbox" id="check9">
+                            <label for="check9"><span class="ico-check"></span>Checked 01</label>
+                        </div>
+                        <br/><br/><h3><strong>선택불가 - 필터</strong></h3><br/>
+                        <div class="btn-check box-check">
+                            <input type="checkbox" id="check10" disabled>
+                            <label for="check10"><span class="ico-check"></span>Disabled 01</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('../src/pages/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

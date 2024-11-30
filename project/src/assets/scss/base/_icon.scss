@@ -1,0 +1,92 @@
+@charset "UTF-8";
+.ico{
+    // 삭제아이콘
+    &-delete{
+        position: absolute; 
+        top: 50%;
+        right: 0; 
+        width: 3rem;
+        height: 3rem; 
+        @include backgroundImg('../../assets/images/icon/ico-delete.svg', center, contain); 
+        transform: translateY(-50%);
+    }
+    
+    &-close{
+        position: absolute; top: 0;right: 0; width: 2.8rem;height: 2.8rem; @include backgroundImg('../../assets/images/icon/ico-close.svg', center, contain);
+    }
+    // 새로고침
+    &-reset{
+        width: 3rem; height: 3rem; @include backgroundImg('../../assets/images/icon/ico-reset.svg', center, contain); 
+    }
+    // 감시 아이콘
+    &-eye {
+        display: block;position: absolute; top: 50%;right: 2rem; width: 2.5rem; height: 2.5rem; @include backgroundImg('../../assets/images/icon/ico-eye-off.svg', center,contain); transform: translateY(-50%); cursor: default;
+        &.show{background-image: url('../../assets/images/icon/ico-eye-on.svg');}
+        &.on{right:6.4rem;}
+    }
+    &-required{
+        overflow: hidden; width:0; padding:0 0 0 1.5rem; 
+        position: relative; display: inline-block; 
+        white-space: nowrap; vertical-align: top;
+        &::before{
+            content: '*'; float: left; margin: 0 0 0 -1.5rem; width: 1.5rem; color: $red; text-align: center;
+        }
+    }
+    &-calendar{
+        @include backgroundImg('../../assets/images/icon/ico-calendar.svg', calc(100% - 2rem) center, 2rem 2rem);
+    }
+    //검색아이콘
+    &-search{
+        position: absolute; 
+        top: 50%; 
+        right:0; 
+        width:3.4rem;
+        height:3.4rem; 
+        @include backgroundImg('../../assets/images/icon/ico-search.svg', center, contain);
+        transform: translateY(-50%); 
+    }
+}
+
+
+//페이지네이션 아이콘
+.paging {
+    &-prev {
+        display:block;
+        width:3.5rem;
+        height:3.5rem;
+        @include backgroundImg('../../assets/images/icon/paging-prev.svg', center center, 2.1rem 2.1rem);
+    }
+    &-first {
+        display:block;
+        width:3.5rem;
+        height:3.5rem;
+        @include backgroundImg('../../assets/images/icon/paging-first.svg', center center, 2.1rem 2.1rem);
+    }
+    &-next {
+        display:block;
+        width:3.5rem;
+        height:3.5rem;
+        @include backgroundImg('../../assets/images/icon/paging-next.svg', center center, 2.1rem 2.1rem);
+    }
+    &-end {
+        display:block;
+        width:3.5rem;
+        height:3.5rem;
+        @include backgroundImg('../../assets/images/icon/paging-end.svg', center center, 2.1rem 2.1rem);
+    }
+}
+
+ // validation 아이콘
+.validation-list{
+    &-item{
+        &::before{
+            content: '';display: inline-block;position: absolute; left: 0; top: 50%; width: 1.5rem;height: 1.5rem;@include backgroundImg('../../assets/images/icon/ico-check.svg', center, contain); transform: translateY(-50%);
+        }
+        &.success {
+            &::before{background-image: url('../../assets/images/icon/ico-check-success.svg');}
+        }
+        &.error {
+            &::before{background-image: url('../../assets/images/icon/ico-check-error.svg');}
+        }
+    }
+}

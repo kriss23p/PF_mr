@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+@@include('./pages/includes/head.html', {
+    pageTitle : '라이브러리 | 고객지원 - 미라콤아이앤씨',
+    ogTitle: '라이브러리 | 고객지원 - 미라콤아이앤씨',
+    ogDesc: '미라콤아이앤씨의 브로슈어, 구축사례, 동영상 등 다양한 유형의 자료에 쉽게 접근할 수 있도록 도와드립니다.',
+    metaDescription: '미라콤아이앤씨의 브로슈어, 구축사례, 동영상 등 다양한 유형의 자료에 쉽게 접근할 수 있도록 도와드립니다.',
+    metaKeywords: 'Miracominc,miracom,미라콤아이앤씨,미라콤,스마트팩토리,smartfactory,라이브러리,브로슈어,구축사례,동영상,스마트팩토리구축사례,MES구축사례,고객지원',
+    ogUrl: 'https://miracom-inc.com',
+    ogImage: '../../assets/images/og/miracom-og.png',
+    ogType: 'article',
+    cssPath : '../../assets/css/common.min.css'
+})
+</head>
+<body class="white">
+<div id="wrap">
+
+    @@include('../src/pages/includes/header.html', {
+        type : 'sub-type',
+        gnb : true,
+        subDepth: true,
+        subArr : ['미라콤아이앤씨', '고객지원', '라이브러리​']
+    })
+    <main class="container" id="goto-conts">
+        <div class="sub-conts">
+            <!-- 컨텐츠 시작 -->
+            <section class="customer-02">
+                <p class="depth-tit">고객지원</p>
+                <div class="page-tit">
+                    <h1>라이브러리</h1>
+                </div>
+                <div class="box-tab tab-ctrl">
+                    <div class="tab-ctrl-radius">
+                        <ul class="tab-btn-wrap">
+                            <li class="on"><a href="javascript:;">전체</a></li>
+                            <li><a href="javascript:;">브로슈어</a></li>
+                            <li><a href="javascript:;">구축사례</a></li>
+                            <li><a href="javascript:;">동영상</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="page-desc twin">
+                    <aside class="library-menu">
+                        <div class="menu-title-wrap">
+                            <h6 class="menu-tit">오퍼링</h6>
+                        </div>
+                        <div class="check-depthbox">
+                            <div class="box-check">
+                                <input type="checkbox" id="check1">
+                                <label for="check1">전체</label>
+                            </div>
+                        </div>
+                        <div class="check-depthbox">
+                            <div class="box-check">
+                                <input type="checkbox" id="check2">
+                                <label for="check2">스마트팩토리 컨설팅</label>
+                            </div>
+                        </div>
+                        <div class="check-depthbox">
+                            <div class="box-check">
+                                <input type="checkbox" id="check3">
+                                <label for="check3">On-PremiseMES</label>
+                            </div>
+                        </div>
+                        <div class="check-depthbox">
+                            <div class="box-check">
+                                <input type="checkbox" id="check4">
+                                <label for="check4">Cloud MES</label>
+                            </div>
+                        </div>
+                        <div class="check-depthbox">
+                            <div class="box-check">
+                                <input type="checkbox" id="check5">
+                                <label for="check5">ERP 구축</label>
+                            </div>
+                        </div>
+                        <div class="check-depthbox">
+                            <div class="box-check">
+                                <input type="checkbox" id="check6">
+                                <label for="check6">설비 자동화</label>
+                            </div>
+                        </div>
+                        <div class="check-depthbox">
+                            <div class="box-check">
+                                <input type="checkbox" id="check7">
+                                <label for="check7">제조물류 자동화</label>
+                            </div>
+                        </div>
+                        <div class="check-depthbox">
+                            <div class="box-check">
+                                <input type="checkbox" id="check8">
+                                <label for="check8">IT 인프라</label>
+                            </div>
+                        </div>
+                        <div class="check-depthbox">
+                            <div class="box-check">
+                                <input type="checkbox" id="check9">
+                                <label for="check9">IT 운영 (ITO)</label>
+                            </div>
+                        </div>
+                        <div class="check-depthbox">
+                            <div class="box-check">
+                                <input type="checkbox" id="check10">
+                                <label for="check10">Nexplant MESplus MES</label>
+                            </div>
+                        </div>
+                        <div class="check-depthbox">
+                            <div class="box-check">
+                                <input type="checkbox" id="check11">
+                                <label for="check11">Nexplant MESplus QMS</label>
+                            </div>
+                        </div>
+                        <div class="check-depthbox">
+                            <div class="box-check">
+                                <input type="checkbox" id="check12">
+                                <label for="check12">Nexplant MESplus MC</label>
+                            </div>
+                        </div>
+                        <div class="check-depthbox">
+                            <div class="box-check">
+                                <input type="checkbox" id="check13">
+                                <label for="check13">Nexplant MESplus MCS</label>
+                            </div>
+                        </div>
+                        <div class="check-depthbox">
+                            <div class="box-check">
+                                <input type="checkbox" id="check14">
+                                <label for="check14">Nexplant MESplus Highway101</label>
+                            </div>
+                        </div>
+                        <button type="button" class="check-submit">조회</button>
+                    </aside>
+                    <div class="board library">
+                        <div class="search-wrap">
+                            <div class="box-input serach-input">
+                                <div class="input-wrap">
+                                    <input type="text" placeholder="검색어를 입력해 주세요." class="input-default is-delete" title="검색어">
+                                    <button type="button" class="ico-delete"><span class="hidden">삭제</span></button>
+                                    <button class="ico-search" type="button"><span class="hidden">검색</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="total-number">
+                            Total. <span>28</span> [<span>1</span>/<span>3</span>]
+                        </p>
+                        <ul class="board-list">
+                            <li>
+                                <div class="left">
+                                    <p class="type">
+                                        <span class="category">브로슈어</span>
+                                    </p>
+                                    <a href="#" class="title" title="새창열기">
+                                        <strong>[2023 스마트 제조 대전망] 먼저 알면 성과 내는 2023년 스마트 제조 트렌드</strong>
+                                    </a>
+                                    <p class="conts">통합생산관리 솔루션</p>
+                                </div>
+                                <div class="right">
+                                    <a href="#" target="_blank" class="btn icon link" title="새창 열기"><span class="hidden">동영상 보러 가기 새창 이동</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <p class="type">
+                                        <span class="category">브로슈어</span>
+                                    </p>
+                                    <a href="#" class="title" title="새창열기">
+                                        <strong>[2023 스마트 제조 대전망] 먼저 알면 성과 내는 2023년 스마트 제조 트렌드</strong>
+                                    </a>
+                                    <p class="conts">통합생산관리 솔루션</p>
+                                </div>
+                                <div class="right">
+                                    <a href="#" target="_blank" class="btn icon link" title="새창 열기"><span class="hidden">동영상 보러 가기 새창 이동</span></a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="no-result">
+                            <p class="no-result-txt">
+                                검색 결과 혹은 게시물이 없습니다.
+                            </p>
+                        </div>
+                        @@include('./pages/includes/pagination.html')
+                    </div>
+                 </div>
+            </section>
+            <!-- 컨텐츠 끝 -->
+        </div>
+    </main>
+    @@include('./pages/includes/footer.html')
+    <!-- SCRIPT IMPORT -->
+    @@include('../src/pages/includes/scriptImport.html', {pageMain : false,})
+</div>
+</body>
+</html>

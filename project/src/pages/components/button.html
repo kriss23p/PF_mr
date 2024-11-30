@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../src/pages/includes/guide/head.html', {title: '컴포넌트 가이드 - 미라콤'})
+
+<body>
+    <div id="wsg-wrap" class="wsg">
+        <header class="wsg-header">
+            <nav id="nav">
+                <ul>
+                    <li class=""><a href="../../index.html">포트폴리오 사이트</a></li>
+                    <li class="on"><a href="../components/wsg.html">컴포넌트</a></li>
+                </ul>
+            </nav>
+        </header>
+        <ul class="guideSubmenu">
+            <li><a href="./wsg.html">폰트/컬러</a></li>
+            <li><a href="./button.html" class="guideOn">버튼</a></li>
+            <li><a href="./form.html">form</a></li>
+            <li><a href="./tab.html">탭</a></li>
+            <!-- <li><a href="./board.html">게시판</a></li>
+            <li><a href="./customer-logo.html">고객사 logo</a></li> -->
+        </ul>
+
+        <div class="guideContainer">
+            <section class="sample">
+                <h2 class="sampleTitle">Button</h2>
+                <div class="sampleContent">
+                    <h3><strong>기본 화살표 버튼</strong></h3>
+                    <div class="btn-wrap">
+                        <button class="btn default" type="button">Button Text</button>
+                    </div>
+                    <div class="btn-wrap">
+                        <button class="btn default ty02" type="button">Button Text</button>
+                    </div>
+                    <div class="btn-wrap">
+                        <button class="btn default ty03" type="button">Button Text</button>
+                    </div>
+                    <div class="btn-wrap">
+                        <button class="btn default ty04" type="button">Button Text</button>
+                    </div>
+
+                </div>
+            </section>
+            <section class="sample bg-bl">
+                <h2 class="sampleTitle">Button</h2>
+                <div class="sampleContent">
+                    <h3 style="color:#fff"><strong>기본 화살표 버튼 - 화이트</strong></h3>
+                    <div class="btn-wrap">
+                        <button class="btn default02" type="button">Button Text</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sample">
+                <h2 class="sampleTitle">Button - icon</h2>
+                <div class="sampleContent">
+                    <h3><strong>아이콘 버튼</strong></h3>
+                    <div class="btn-wrap">
+                        <button class="btn icon" type="button">다운로드</button>
+                    </div>
+                    <div class="btn-wrap">
+                        <a href="#none" class="btn icon link" target="_blank">이동</a>
+                    </div>
+                    <div class="btn-wrap">
+                        <a href="#none" class="btn icon video" target="_blank">영상</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sample">
+                <h2 class="sampleTitle">Button - text line</h2>
+                <div class="sampleContent">
+                    <h3><strong>텍스트 라인 버튼</strong></h3>
+                    <div class="btn-wrap">
+                        <button class="btn line" type="button">text</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sample">
+                <h2 class="sampleTitle">Button - 게시판</h2>
+                <div class="sampleContent">
+                    <h3><strong>게시판 버튼</strong></h3>
+                    <div class="btn-wrap">
+                        <button class="btn info" type="button">text.pdf</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- SCRIPT IMPORT -->
+    @@include('../src/pages/includes/scriptImport.html', {pageMain : false,})
+
+</body>
+
+</html>

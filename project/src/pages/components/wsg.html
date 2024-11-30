@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../src/pages/includes/guide/head.html', {title: '컴포넌트 가이드 - 미라콤'})
+
+<body>
+    <div id="wsg-wrap" class="wsg">
+        <header class="wsg-header">
+            <!-- <h1><a href="javascript:void(0);">
+                <img src="/assets/images/common/header-logo.png" alt="로고"></a>
+            </h1> -->
+            <nav id="nav">
+                <ul>
+                    <li class=""><a href="../../index.html">포트폴리오 사이트</a></li>
+                    <!-- <li class=""><a href="../../status/eng-iaList.html">영문 메인 페이지</a></li> -->
+                    <li class="on"><a href="../components/wsg.html">컴포넌트</a></li>
+                </ul>
+            </nav>
+        </header>
+        <ul class="guideSubmenu">
+            <li><a href="./wsg.html" class="guideOn">폰트/컬러</a></li>
+            <li><a href="./button.html">버튼</a></li>
+            <li><a href="./form.html">form</a></li>
+            <li><a href="./tab.html">탭</a></li>
+        </ul>
+
+        <div class="guideContainer">
+            <section class="sample">
+                <h2 class="sampleTitle">font</h2>
+                <div class="sampleContent">
+
+                    <h3><strong>타이틀</strong></h3>
+                    <p class="semimain-title">
+                        포트폴리오 
+                    </p>
+                    <p class="small-title">
+                        포트폴리오
+                    </p>
+                    <p class="conts-title">
+                        포트폴리오
+                    </p>
+                    <p class="normal-title">
+                        포트폴리오
+                    </p>
+                    <br/><br/>
+                    <h3><strong>본문</strong></h3>
+                    <p class="strong-txt">
+                        포트폴리오
+                    </p>
+                    <p class="normal-txt">
+                        포트폴리오
+                    </p>
+                    <p class="semim-txt">
+                        포트폴리오
+                    </p>
+                    <p class="xsmal-txt">
+                        포트폴리오
+                    </p>
+                    <p class="small-txt">
+                        포트폴리오
+                    </p>
+                    <br/><br/>
+                    <h3><strong>폰트 기본 scss 가이드</strong></h3>
+                    <p><b>@include text($weight, $size, $height: 1.5, $color: $gray05, $spacing: 0)  사용</b><br> ex) @include text(600,8rem,1.4,$black,0rem);</p>
+                    <br>
+                    <p> <b>main</b> : @include text(600,8rem,1.4,$black,0rem); &nbsp;&nbsp;클래스명 : .semimain-title</p>
+                    <p> <b>subPage Title h1</b> : @include text(600,6.2rem,1.4,$black,0rem);  &nbsp;&nbsp; 클래스명 : .small-title</p>
+                    <p><b>1depth Title </b>: @include text(400,2rem,1.4,$black,0rem);   &nbsp;&nbsp;클래스명 : .depth-tit & .normal-txt</p>
+                    <p><b>sub Page description</b> : @include text(400,2.6rem,1.4,$black,0rem);  &nbsp;&nbsp;클래스명 : .page-tit h2  & .strong-txt</p>
+                    <p><b>sub Page article TItle</b> :  @include text(600,3.4rem,1.4,$black,0rem);  &nbsp;&nbsp;클래스명 : .sticky-layout .right .box-contents-wrap article .tit-box h4</p>
+                    <p><b>sub Page article description</b> :  @include text(400,2rem,1.6,#484c51,0rem);   &nbsp;&nbsp;클래스명 : .sticky-layout .right .box-contents-wrap article .tit-box p</p>
+                </div>
+            </section>
+
+            <section class="sample">
+                <h2 class="sampleTitle">color</h2>
+                <div class="sampleContent">
+
+                    <h3><strong>Color System</strong></h3>
+                    <div class="color-list-box">
+                        <div class="black">
+                            <span>Black</span>
+                            <span>#050505</span>
+                            <span>scss => $black;</span>
+                        </div>
+                        <div class="gray06">
+                            <span>gray06</span>
+                            <span>#484C51</span>
+                            <span>scss => $gray06;</span>
+                        </div>
+                        <div class="gray05">
+                            <span>gray05</span>
+                            <span>#8695B4</span>
+                            <span>scss => $gray05;</span>
+                        </div>
+                        <div class="gray04">
+                            <span>gray04</span>
+                            <span>#9A9DA5</span>
+                            <span>scss => $gray04;</span>
+                        </div>
+                        <div class="gray03">
+                            <span class="black-txt">gray03</span>
+                            <span class="black-txt">#C9CDD6</span>
+                            <span class="black-txt">scss => $gray03;</span>
+                        </div>
+                        <div class="gray02">
+                            <span class="black-txt">gray02</span>
+                            <span class="black-txt">#E5EBF4</span>
+                            <span class="black-txt">scss => $gray02;</span>
+                        </div>
+                        <div class="gray01">
+                            <span class="black-txt">gray01</span>
+                            <span class="black-txt">#F4F4F4</span>
+                            <span class="black-txt">scss => $gray01;</span>
+                        </div>
+                        <div class="white">
+                            <span class="black-txt">white</span>
+                            <span class="black-txt">#FFFFFF</span>
+                            <span class="black-txt">scss => $white;</span>
+                        </div>
+                        <div class="dim">
+                            <span>dim</span>
+                            <span>#050505 (opacity 40%)</span>
+                            <span>scss => $dim;</span>
+                        </div>
+                        <div class="bule01">
+                            <span>bule01</span>
+                            <span>#0057FF</span>
+                            <span>scss => $blue01;</span>
+                        </div>
+                        <div class="bule02">
+                            <span>bule02</span>
+                            <span>#003CAF</span>
+                            <span>scss => $blue02;</span>
+                        </div>
+                        <div class="bule03">
+                            <span class="black-txt">bule03</span>
+                            <span class="black-txt">#00F0FF</span>
+                            <span class="black-txt">scss => $blue03;</span>
+                        </div>
+                        <div class="violet">
+                            <span>violet</span>
+                            <span>#641BDF</span>
+                            <span>scss => $violet;</span>
+                        </div>
+                        <div class="lime">
+                            <span class="black-txt">lime</span>
+                            <span class="black-txt">#DAFF01</span>
+                            <span class="black-txt">scss => $lime;</span>
+                        </div>
+                        <div class="red">
+                            <span>red</span>
+                            <span>#ED1D5B</span>
+                            <span>scss => $red;</span>
+                        </div>
+                    </div>
+                </div>
+                <br/><br/>
+                <h3><strong>Color Palette</strong></h3>
+                    <div class="color-list-box">
+                        <div class="bule-sacle-01">
+                            <span>Blue1</span>
+                            <span class="black-txt">scss => $palette-gradient-01;</span>
+                        </div>
+                        <div class="bule-sacle-02">
+                            <span>Blue2</span>
+                            <span class="black-txt">scss => $palette-gradient-02;</span>
+                        </div>
+                        <div class="bule-sacle-03">
+                            <span>Blue3</span>
+                            <span class="black-txt">scss => $palette-gradient-03;</span>
+                        </div>
+                    </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- SCRIPT IMPORT -->
+    @@include('../src/pages/includes/scriptImport.html', {pageMain : false,})
+</body>
+
+</html>

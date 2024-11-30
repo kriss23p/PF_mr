@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+@@include('./pages/includes/head.html', {
+    pageTitle : 'IR | 회사소개 - 미라콤아이앤씨',
+    ogTitle: 'IR | 회사소개 - 미라콤아이앤씨',
+    ogDesc: '미라콤아이앤씨의 재무현황, 감사보고서, 판매실적 등에 대해 안내해드립니다.',
+    metaDescription: '미라콤아이앤씨의 재무현황, 감사보고서, 판매실적 등에 대해 안내해드립니다.',
+    metaKeywords: '미라콤아이앤씨, 미라콤, IR, 재무제표. 재무상태표, 결산공고',
+    ogUrl: 'https://miracom-inc.com',
+    ogImage: '../../assets/images/og/miracom-og.png',
+    ogType: 'article',
+    cssPath : '../../assets/css/common.min.css'
+})
+</head>
+<body class="white">
+<div id="wrap">
+
+    @@include('../src/pages/includes/header.html', {
+        type : 'sub-type',
+        gnb : true,
+        subDepth: true,
+        subArr : ['미라콤아이앤씨', '회사소개', 'IR']
+    })
+
+    <!-- 2023.07.09 class company-07 추가 -->
+    <main class="container board" id="goto-conts">
+        <div class="sub-conts board-view">
+            <section class="board-view-header">
+                <p class="path">IR</p>
+                <h2 class="title">[미라콤아이앤씨] 제21기 결산공고 연결재무상태표</h1>
+                <span class="date">2023.05.06</span> <span class="nikname">차상필</span>
+                <button class="downLoad" type="button">[미라콤아이앤씨] 제25기 결산공고 개별재무상태표.pdf</button>
+            </section>
+            <section class="board-view-conts">
+                    123123123
+            </section>
+            <section class="board-view-footer">
+                <button class="go-back" type="button">목록으로</button>
+                <div class="default-table-info-pages">
+                    <ul>
+                        <li>
+                            <a href="#">이전글</a>
+                            <div>미라콤이 제안하는 스마트팩토리 구현 여정</div>
+                        </li>
+                        <li>
+                            <a href="#">다음글</a>
+                            <div>[EVENT] 미라콤아이앤씨 유튜브 구독 추천왕을 찾습니다. (~9/23)</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    
+    </main>
+    @@include('./pages/includes/footer.html')
+    <!-- SCRIPT IMPORT -->
+    @@include('../src/pages/includes/scriptImport.html', {pageMain : false,})
+</div>
+</body>
+</html>

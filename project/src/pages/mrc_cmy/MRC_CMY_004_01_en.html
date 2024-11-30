@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+@@include('./pages/includes/head_en.html', {
+    pageTitle : "Reporting Wrongful Practices | About Us - Miracom",
+    ogTitle: "Reporting Wrongful Practices | About Us - Miracom",
+    ogDesc: "The Management Diagnosis Group is an independent department under the direct supervision of the president and conducts operations diagnosis (elimination of business operation inefficiencies) and compliance diagnosis (illegal diagnosis, security diagnosis).",
+    metaDescription: "The Management Diagnosis Group is an independent department under the direct supervision of the president and conducts operations diagnosis (elimination of business operation inefficiencies) and compliance diagnosis (illegal diagnosis, security diagnosis).",
+    metaKeywords: "Miracominc, Miracom, Reporting Wrongful Practices, corruption",
+    ogUrl: "https://miracom-inc.com",
+    ogImage: "../../assets/images/og/miracom-og.png",
+    ogType: "article",
+    cssPath : "../../assets/css/common.min.css"
+})
+</head>
+<body class="white">
+<div id="wrap">
+
+    @@include('../src/pages/includes/header_en.html', {
+        type : 'sub-type',
+        gnb : true,
+        subDepth: true,
+        subArr : ['miracom', 'About Us', 'Reporting Wrongful Practices']
+    })
+
+
+    <main class="container" id="goto-conts">
+        <div class="sub-conts">
+            <!-- 컨텐츠 시작 --> 
+            <section class="fraud-report eng">
+                <div>
+                    <h2 class="small-title mb20">Reporting Wrongful Practices</h2>
+                    <h6 class="strong-txt">We will create a clean society without corruption.</h6>
+                    
+                    <div class="box-input-wrap">
+                        <div class="flex-sb">
+                            <div class="title-wrap">     
+                                <h4 class="normal-txt">Informant <br class="mo_br">Information</h4>                       
+                                <p class="notice"><span class="ico-required">(indicates a required input value)</span>Required input</p>
+                            </div>
+                            <div class="flex-end">
+                                <div class="btn-check">
+                                    <input type="checkbox" id="check2">
+                                    <label for="check2">anonymity</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-input">
+                            <div class="input-wrap">
+                                <label for="input1" class="input-label">Name<span class="ico-required">(indicates a required input value)</span></label>
+                                <input id="input1" type="text" class="input-default is-delete"  placeholder="Please enter your name.">
+                                <button type="button" class="ico-delete"><span class="hidden">delete</span></button>
+                            </div>
+                        </div>
+                        <div class="box-input">
+                            <div class="input-wrap">
+                                <label for="input1" class="input-label">Email</label>
+                                <input id="input1" type="text" class="input-default is-delete" placeholder="Please enter your email address.">
+                                <button type="button" class="ico-delete"><span class="hidden">delete</span></button>
+                            </div>
+                        </div>
+                        <div class="box-input">
+                            <div class="input-wrap">
+                                <label for="input1" class="input-label">Contact Information</label>
+                                <input id="input1" type="text" class="input-default is-delete"  placeholder="Please enter your contact information.">
+                                <button type="button" class="ico-delete"><span class="hidden">delete</span></button>
+                            </div>
+                        </div>
+                        <div class="select-input-wrap">
+                            <div class="box-select">
+                                <label for="select2" class="select-label">Reply to reporting<span class="ico-required">(indicates a required input value)</span></label>
+                                <select name="select2" id="select2" class="select-default" title="Select Report Reply">
+                                    <option value="phone">Call</option>
+                                    <option value="visit">Visit</option>
+                                    <option value="email">Email</option>
+                                    <option value="etc">Others</option>
+                                </select>
+                            </div>
+                            <div class="box-input">
+                                <div class="input-wrap">
+                                    <input type="text" placeholder="Please enter the contents." class="input-default is-delete">
+                                    <button type="button" class="ico-delete"><span class="hidden">delete</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-input-wrap">
+                        <h4 class="normal-txt mb6">Report</h4>
+                        <div class="box-input">
+                            <div class="input-wrap">
+                                <label for="input1" class="input-label">Title<span class="ico-required">(indicates a required input value)</span></label>
+                                <input id="input1" type="text" class="input-default is-delete" placeholder="Please enter a title.">
+                                <button type="button" class="ico-delete"><span class="hidden">delete</span></button>
+                            </div>
+                        </div>
+                        <div class="textarea-wrap">
+                            <label for="reason" class="input-label">Content<span class="ico-required">(indicates a required input value)</span></label>
+                            <div class="box-textarea box-input">
+                                <textarea id="reason" type="textarea" placeholder="Contents(If content of the report is more than 2000 characters, please report it with an attached file.)" class="input-default is-delete"></textarea>
+                                <p class="text-count"> <span><em>0</em></span> / 2000</p>
+                            </div>
+                        </div>
+
+                        <div class="file-input-wrap">
+                            <div class="box-attach-wrap">
+                                <span class="input-label">Attachment<span class="ico-required">(indicates a required input value)</span></span>
+                                <div class="box-attach">
+                                    <!--파일 업로드 시 .file-name .hidden 추가 만약 파일이 없다면 .hidden 삭제 -->
+                                    <span class="file-name">Select File</span>
+                                    <input type="file" id="attach1" placeholder="Select File">
+                                    <div class="btn-wrap">
+                                        <label for="attach1" class="btn default" tabindex="0">Add File</label>
+                                    </div>
+                                </div>
+                                <ul class="box-file-attached"></ul>
+                            </div>
+                            <span class="file-desc">Maximum capacity 100MB or less</span>
+                        </div>
+                    </div>
+
+                    <div class="btn-wrap fraud-report-btn">
+                        <button class="btn default ty03" type="button">Report</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    @@include('./pages/includes/footer_en.html')
+    <!-- SCRIPT IMPORT -->
+    @@include('../src/pages/includes/scriptImport.html', {pageMain : false,})
+</div>
+</body>
+</html>

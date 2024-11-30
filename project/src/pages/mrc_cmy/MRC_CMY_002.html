@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+@@include('./pages/includes/head.html', {
+    pageTitle : 'CEO | 회사소개 - 미라콤아이앤씨 ',
+    ogTitle: 'CEO | 회사소개 - 미라콤아이앤씨 ',
+    ogDesc: '미라콤아이앤씨는 스마트팩토리 솔루션과 디지털 기술 역량을 기반으로 고객의 제조 혁신을 지원하는 스마트팩토리 전문 기업입니다.',
+    metaDescription: '미라콤아이앤씨는 스마트팩토리 솔루션과 디지털 기술 역량을 기반으로 고객의 제조 혁신을 지원하는 스마트팩토리 전문 기업입니다.',
+    metaKeywords: 'Miracominc,miracom,미라콤아이앤씨,미라콤,스마트팩토리,smartfactory,CEO,대표이사',
+    ogUrl: 'https://miracom-inc.com',
+    ogImage: '../../assets/images/og/miracom-og.png',
+    ogType: 'article',
+    cssPath : '../../assets/css/common.min.css'
+})
+</head>
+<body>
+<div id="wrap" class="company">
+
+    @@include('../src/pages/includes/header.html', {
+        type : 'sub-type',
+        gnb : true,
+        subDepth: true,
+        subArr : ['미라콤아이앤씨', '회사소개', 'CEO']
+    })
+    <main class="container company-02" id="goto-conts">
+        <div class="sub-conts">
+            <!-- 컨텐츠 시작 -->
+            <section>
+                <div class="page-tit-black">
+                    <h1 class="mb20">CEO</h1>
+                    <h2>
+                        미라콤아이앤씨는 스마트팩토리 솔루션과 디지털 기술 역량을 기반으로<br/> 고객의 제조 혁신을 지원하는 스마트팩토리 전문 기업입니다.
+                    </h2>
+                </div>
+                <div class="flex-layout">
+                    <img class="img-ceo" src="../../assets/images/subpages/mrc_cmy_02_img01.png" alt="">
+                    <div>
+                        <p>
+                            경제, 사회, 환경, 문화 등 모든 부문에서 폭발적인 변화가 진행중입니다. 이러한 변화 속에서의 생존과 성장을 위해 기업 비지니스의 핵심을 담고 있는 생산시스템 및 경영시스템 기반의 디지털 트랜스포메이션이 더욱 중요해지고 있습니다.
+                        </p>
+                        <p>
+                            미라콤아이앤씨는 생산시스템의 무인화, 자동화, 지능화를 지원하는 스마트팩토리 솔루션과 ERP를 포함한 경영시스템의 구축/운영 서비스에 이르기까지 비지니스 전 과정의 디지털 트랜스포메이션을 가능하게 하는 토탈 ICT서비스를 제공합니다.
+                        </p>
+                        <p>
+                            20년 이상 축적된 업종지식과 기술역량을 바탕으로 고객이 속한 산업군과 고객의 비지니스를 이해하고 디지털 기술을 통해 고객의 성장에 필요한 혁신 인사이트를 선도적으로 제공하겠습니다.
+                        </p>
+                        <p>
+                            300여개 고객사를 대상으로 검증된 솔루션과 업종별ㆍ기능별 Best Practices를 활용하고 수준 높은 소프트웨어 개발역량을 통해 고객이 체감할 수 있는 성과를 창출하겠습니다.
+                        </p>
+                        <p>
+                            AI, Big Data Analytics, Cloud 등의 기술을 확보하고 선제적으로 역량을 개발하여 고객의 성공을 사명으로 여기며 고객과 함께 성장하는 신뢰받는 파트너가 되겠습니다.
+                        </p>
+                        <p class="sign">
+                            <span>미라콤아이앤씨 대표이사</span>
+                            <strong>강석립 <img src="../../assets/images/subpages/mrc_cmy_02_ceoSign.png" alt=""></strong>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- 컨텐츠 끝 -->
+        </div>
+    </main>
+    @@include('./pages/includes/footer.html')
+    <!-- SCRIPT IMPORT -->
+    @@include('../src/pages/includes/scriptImport.html', {pageMain : false,})
+</div>
+</body>
+</html>

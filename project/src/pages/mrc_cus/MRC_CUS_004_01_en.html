@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+@@include('./pages/includes/head.html', {
+    pageTitle : "Events | Customer Support - Miracom",
+    ogTitle: "Events | Customer Support - Miracom",
+    ogDesc: "Miracom provides latest news, including announcements and events.",
+    metaDescription: "Miracom provides latest news, including announcements and events.",
+    metaKeywords: "Miracominc, Miracom, MiracomI&C, Smart Factory, Announcement, Event, News, Update, Announcement",
+    ogUrl: "https://miracom-inc.com",
+    ogImage: "../../assets/images/og/miracom-og.png",
+    ogType: "article",
+    cssPath : "../../assets/css/common.min.css"
+})
+</head>
+<body class="white">
+<div id="wrap">
+
+    @@include('../src/pages/includes/header_en.html', {
+        type : 'sub-type',
+        gnb : true,
+        subDepth: true,
+        subArr : ['miracom', 'Customer Support', 'Events']
+    })
+    <main class="container board eng">
+        <div class="sub-conts board-view">
+            <section class="board-view-header">
+                <p class="path">Events</p>
+                <h2 class="title">미라콤이 제안하는 스마트팩토리 구현 여정</h1>
+                <span class="date">2023.05.06</span>
+            </section>
+            <section class="board-view-conts">
+                    123123123
+            </section>
+            <section class="board-view-footer">
+                <button class="go-back" type="button">on the list</button>
+                <div class="default-table-info-pages">
+                    <ul>
+                        <li>
+                            <a href="#">Previous</a>
+                            <div>미라콤이 제안하는 스마트팩토리 구현 여정</div>
+                        </li>
+                        <li>
+                            <a href="#">Next</a>
+                            <div>[EVENT] 미라콤아이앤씨 유튜브 구독 추천왕을 찾습니다. (~9/23)</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    @@include('./pages/includes/footer_en.html')
+    <!-- SCRIPT IMPORT -->
+    @@include('../src/pages/includes/scriptImport.html', {pageMain : false,})
+</div>
+</body>
+</html>
